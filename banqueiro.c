@@ -1,43 +1,24 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
-#include<unistd.h>
+#include <unistd.h>
 
 struct processo
 {
-    char nome[3];
     int * quantTotal;
     int * quantAlloc;
 };
 
-
-int max[100][100];
-int alloc[100][100];
 int need[100][100];
 int avail[100];
-int total [100][100];
-int totalR [100];
 int n,r;
+struct processo * p;
+
+
 void libera();
 void requisicao();
 void showAll();
-int randomico();
-
-
-
-int randomico(int a)
-{
-
-    sleep(1);
-    int x;
-    srand( (unsigned)time(NULL));
-
-    x =  ( rand() % a );
-
-    return x;
-}
-
-
+int randomico(int a);
 
 int main(int argc, char **argv)
 {
@@ -50,12 +31,18 @@ int main(int argc, char **argv)
 
         n = atoi(argv[2]);
 
-
         printf("Numero de Clientes\t %i \n", n);
 
         r = argc - 4;
 
         printf("Numero de recursos\t %i\n", r);
+
+        p = malloc(sizeof(struct processo) * n);
+
+        if(p == NULL){
+            printf("Ocorreu um erro ao na alocaçao\n");
+            exit(-1);
+        }
 
         printf("Quantidade de recurso INICIALMENTE disponível\n");
 
@@ -68,10 +55,13 @@ int main(int argc, char **argv)
         printf("Recursos TOTAL ainda necessários\n");
         for(i=0; i<n; i++)
         {
+            p[i].quantTotal = malloc(sizeof(int) * r);
+            p[i].quantAlloc = malloc(sizeof(int) * r);
             for(j=0; j<r; j++)
             {
-                max[i][j] = randomico(avail[j]);
-                printf("%d ",max[i][j]);
+                p[i].quantTotal[j] = randomico(avail[j]);
+                p[i].quantAlloc[j] = 0;
+                printf("%d ",p[i].quantTotal[j]);
             }
             printf("\n");
         }
@@ -85,11 +75,11 @@ int main(int argc, char **argv)
 
                 int a = randomico(avail[j]);
 
-                if(a <= max[i][j])
+                if(a <= p[i].quantTotal[j])
                 {
-                    alloc[i][j] = a;
-                    printf("%d ",alloc[i][j]);
-                    avail[j] = avail[j] - alloc[i][j];
+                    p[i].quantAlloc[j] = a;
+                    printf("%d ",p[i].quantAlloc[j]);
+                    avail[j] = avail[j] - p[i].quantAlloc[j];
                 }
                 else
                     j--;
@@ -103,7 +93,7 @@ int main(int argc, char **argv)
             for(j=0; j<r; j++)
             {
 
-                printf("%d ",max[i][j] - alloc[i][j]);
+                printf("%d ",p[i].quantTotal[j] - p[i].quantAlloc[j]);
             }
             printf("\n");
         }
@@ -123,7 +113,17 @@ int main(int argc, char **argv)
 }
 
 
+int randomico(int a)
+{
 
+    sleep(1);
+    int x;
+    srand( (unsigned)time(NULL));
+
+    x =  ( rand() % a );
+
+    return x;
+}
 
 
 void showAll()
@@ -135,12 +135,12 @@ void showAll()
         printf("\nP%d\t   ",i);
         for(j=0; j<r; j++)
         {
-            printf("%d ",alloc[i][j]);
+            printf("%d ",p[i].quantAlloc[j]);
         }
         printf("\t");
         for(j=0; j<r; j++)
         {
-            printf("%d ",max[i][j]);
+            printf("%d ",p[i].quantTotal[j]);
         }
         printf("\t");
         if(i==0)
@@ -163,7 +163,7 @@ void requisicao()
     {
         for(j=0; j<r; j++)
         {
-            need[i][j]=max[i][j]-alloc[i][j];
+            need[i][j]=p[i].quantTotal[j]-p[i].quantAlloc[j];
         }
     }
     printf("\n");
@@ -197,7 +197,7 @@ void libera()
                     {
                         for(k=0; k<r; k++)
                         {
-                            avail[k]+=alloc[i][j];
+                            avail[k]+=p[i].quantAlloc[j];
                             finalizado[i]=1;
                             flag=1;
                         }
