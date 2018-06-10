@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include <time.h>
-#include<unistd.h> 
+#include<unistd.h>
 
 struct processo
 {
@@ -10,57 +10,86 @@ struct processo
     int * quantAlloc;
 };
 
+
 int max[100][100];
 int alloc[100][100];
 int need[100][100];
 int avail[100];
+int total [100][100];
+int totalR [100];
 int n,r;
 void libera();
 void requisicao();
 void showAll();
 int randomico();
 
+
+
+int randomico(int a)
+{
+
+    sleep(1);
+    int x;
+    srand( (unsigned)time(NULL));
+
+    x =  ( rand() % a );
+
+    return x;
+}
+
+
+
 int main(int argc, char **argv)
 {
     int i,j;
     int a;
-    
+
     if(argc > 5)
     {
 
 
         n = atoi(argv[2]);
-        
+
 
         printf("Numero de Clientes\t %i \n", n);
-        
-        r = argc - 4;
-     
-        printf("Numero de Recursos\t %i\n", r);
 
-        printf("Quantidade de recursos que cada Cliente precisa para ser terminado\n");
+        r = argc - 4;
+
+        printf("Quantidade de recurso INICIALMENTE disponível\t %i\n", r);
+
+        printf("Capital disponível 1\n");
+
+        for(i = 4, j = 0 ; i < argc; i++ , j++) {
+            avail[j] = atoi(argv[i]);
+            printf("%i ", avail[j]);
+        }
+        printf("\n");
+
+        printf("Recursos TOTAL ainda necessários\n");
         for(i=0; i<n; i++)
         {
             for(j=0; j<r; j++)
             {
-                max[i][j] = randomico();
+                max[i][j] = randomico(avail[j]);
                 printf("%d ",max[i][j]);
             }
             printf("\n");
         }
 
-        printf("Quantidade de recursos que cada Cliente possui\n");
+
+        printf("Quantidade de recurso Alocado\n");
         for(i=0; i<n; i++)
         {
             for(j=0; j<r; j++)
             {
 
-                int a = randomico();
+                int a = randomico(avail[j]);
 
                 if(a <= max[i][j])
                 {
-                    alloc[i][j] = a;    
+                    alloc[i][j] = a;
                     printf("%d ",alloc[i][j]);
+                    avail[j] = avail[j] - alloc[i][j];
                 }
                 else
                     j--;
@@ -68,18 +97,23 @@ int main(int argc, char **argv)
             printf("\n");
         }
 
-        for(i = 4, j = 0 ; i < argc; i++ , j++)
-            avail[j] = atoi(argv[i]);
+        printf("Quantidade de recursos que cada Cliente precisa\n");
+        for(i=0; i<n; i++)
+        {
+            for(j=0; j<r; j++)
+            {
 
-        printf("Quantidade de recursos disponíveis\n");
+                printf("%d ",max[i][j] - alloc[i][j]);
+            }
+            printf("\n");
+        }
+        printf("Quantidade de recurso FINAL disponível\n");
+
         for(i = 0; i < r; i++)
             printf("%i ", avail[i]);
-        
         printf("\n");
 
 
-
-        
 
         showAll();
         requisicao();
@@ -90,19 +124,7 @@ int main(int argc, char **argv)
 
 
 
-int randomico()
-{
-   
-     sleep(1);
-    int i, x,s;
-      for(i=1 ; i <= 11 ; i++)
-      {  
-         srand( (unsigned)time(NULL));
-           
-          x = 1 + ( rand() % 10 );
-       }
-       return x;
-}
+
 
 void showAll()
 {
@@ -153,7 +175,6 @@ void libera()
 {
     int i,j;
     int finalizado[100],temp,flag=1,k,c1=0;
-    int safe[100];
 
     for(i=0; i<n; i++)
     {
@@ -201,13 +222,16 @@ void libera()
             printf("P%d->",i);
         }
     }
+
+
+
+
     if(c1==n)
     {
         printf("\n Estado seguro\n");
     }
     else
     {
-        printf("\n Ocorreu um Dead lock");
         printf("\n Estado inseguro\n");
     }
 }
