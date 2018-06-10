@@ -20,7 +20,6 @@ void requisicao();
 void showAll();
 int randomico();
 
-
 int main(int argc, char **argv)
 {
     int i,j;
