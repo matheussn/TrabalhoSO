@@ -3,6 +3,13 @@
 #include <time.h>
 #include<unistd.h> 
 
+struct processo
+{
+    char nome[3];
+    int * quantTotal;
+    int * quantAlloc;
+};
+
 int max[100][100];
 int alloc[100][100];
 int need[100][100];
