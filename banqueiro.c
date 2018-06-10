@@ -8,75 +8,78 @@ int alloc[100][100];
 int need[100][100];
 int avail[100];
 int n,r;
+void libera();
+void requisicao();
 void showAll();
-void requisicao_e_libera();
 int randomico();
 
 
-
-
-
-
-
-
-int main()
+int main(int argc, char **argv)
 {
     int i,j;
     int a;
     
-    n = 6;
-    
-
-    printf("Numero de Clientes\t %i \n", n);
-    
-    r = 3;
- 
-    printf("Numero de Recursos\t %i\n", r);
-
-    printf("Quantidade de recursos que cada Cliente precisa para ser terminado\n");
-    for(i=0; i<n; i++)
+    if(argc > 5)
     {
-        for(j=0; j<r; j++)
-        {
-            max[i][j] = randomico();
-            printf("%d ",max[i][j]);
-        }
-        printf("\n");
-    }
-    printf("Quantidade de recursos que cada Cliente possui\n");
-    for(i=0; i<n; i++)
-    {
-        for(j=0; j<r; j++)
-        {
 
-            int a = randomico();
 
-            if(a <= max[i][j])
+        n = atoi(argv[2]);
+        
+
+        printf("Numero de Clientes\t %i \n", n);
+        
+        r = argc - 4;
+     
+        printf("Numero de Recursos\t %i\n", r);
+
+        printf("Quantidade de recursos que cada Cliente precisa para ser terminado\n");
+        for(i=0; i<n; i++)
+        {
+            for(j=0; j<r; j++)
             {
-                alloc[i][j] = a;    
-                printf("%d ",alloc[i][j]);
+                max[i][j] = randomico();
+                printf("%d ",max[i][j]);
             }
-            else
-                j--;
+            printf("\n");
         }
+
+        printf("Quantidade de recursos que cada Cliente possui\n");
+        for(i=0; i<n; i++)
+        {
+            for(j=0; j<r; j++)
+            {
+
+                int a = randomico();
+
+                if(a <= max[i][j])
+                {
+                    alloc[i][j] = a;    
+                    printf("%d ",alloc[i][j]);
+                }
+                else
+                    j--;
+            }
+            printf("\n");
+        }
+
+        for(i = 4, j = 0 ; i < argc; i++ , j++)
+            avail[j] = atoi(argv[i]);
+
+        printf("Quantidade de recursos disponíveis\n");
+        for(i = 0; i < r; i++)
+            printf("%i ", avail[i]);
+        
         printf("\n");
+
+
+
+        
+
+        showAll();
+        requisicao();
+        libera();
+        return 0;
     }
-    printf("Quantidade de recursos disponíveis\n");
-  
-        avail[0] =  3;     
-        avail[1] =  3;
-        avail[2] =  2;
-        printf("%i %i %i ", avail[0], avail[1], avail[2]);
-    
-    printf("\n");
-
-
-
-    
-
-    showAll();
-    requisicao_e_libera();
-    return 0;
 }
 
 
@@ -119,15 +122,14 @@ void showAll()
         }
     }
 }
-void requisicao_e_libera()
+
+
+
+
+void requisicao()
 {
-    int finalizado[100],temp,flag=1,k,c1=0;
-    int safe[100];
     int i,j;
-    for(i=0; i<n; i++)
-    {
-        finalizado[i]=0;
-    }
+
 
     for(i=0; i<n; i++)
     {
@@ -137,6 +139,21 @@ void requisicao_e_libera()
         }
     }
     printf("\n");
+
+}
+
+
+void libera()
+{
+    int i,j;
+    int finalizado[100],temp,flag=1,k,c1=0;
+    int safe[100];
+
+    for(i=0; i<n; i++)
+    {
+        finalizado[i]=0;
+    }
+
 
     while(flag)
     {
