@@ -55,9 +55,9 @@ int main(int argc, char **argv)
 
         r = argc - 4;
 
-        printf("Quantidade de recurso INICIALMENTE disponível\t %i\n", r);
+        printf("Numero de recursos\t %i\n", r);
 
-        printf("Capital disponível 1\n");
+        printf("Quantidade de recurso INICIALMENTE disponível\n");
 
         for(i = 4, j = 0 ; i < argc; i++ , j++) {
             avail[j] = atoi(argv[i]);
