@@ -95,59 +95,6 @@ int randomico()
        return x;
 }
 
-
-void input()
-{
-    int i,j;
-    int a;
-    
-    n = 6;
-    
-
-    printf("Numero de Clientes\t %i \n", n);
-    
-    r = 3;
- 
-    printf("Numero de Recursos\t %i\n", r);
-
-    printf("Quantidade de recursos que cada Cliente precisa para ser terminado\n");
-    for(i=0; i<n; i++)
-    {
-        for(j=0; j<r; j++)
-        {
-            max[i][j] = randomico();
-            printf("%d ",max[i][j]);
-        }
-        printf("\n");
-    }
-    printf("Quantidade de recursos que cada Cliente possui\n");
-    for(i=0; i<n; i++)
-    {
-        for(j=0; j<r; j++)
-        {
-
-            int a = randomico();
-
-            if(a <= max[i][j])
-            {
-                alloc[i][j] = a;    
-                printf("%d ",alloc[i][j]);
-            }
-            else
-                j--;
-        }
-        printf("\n");
-    }
-    printf("Quantidade de recursos disponíveis\n");
-  
-        avail[0] =  3;     
-        avail[1] =  3;
-        avail[2] =  2;
-        printf("%i %i %i ", avail[0], avail[1], avail[2]);
-    
-    printf("\n");
-
-}
 void showAll()
 {
     int i,j;
