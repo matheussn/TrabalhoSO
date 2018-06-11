@@ -9,8 +9,8 @@ struct processo
     int * quantAlloc;
 };
 
-int need[100][100];
-int avail[100];
+int **need;
+int *avail;
 int n,r;
 struct processo * p;
 
@@ -43,7 +43,9 @@ int main(int argc, char **argv)
             printf("Ocorreu um erro ao na alocaçao\n");
             exit(-1);
         }
-
+        
+        avail = (int *)malloc(sizeof(int) * (argc - 4));            
+    
         printf("Quantidade de recurso INICIALMENTE disponível\n");
 
         for(i = 4, j = 0 ; i < argc; i++ , j++) {
@@ -157,12 +159,17 @@ void showAll()
 void requisicao()
 {
     int i,j;
-
+    
+    need = malloc (n * sizeof(int*));
+  
 
     for(i=0; i<n; i++)
     {
+        need[i] = (int*) malloc (r * sizeof(int));
+
         for(j=0; j<r; j++)
         {
+
             need[i][j]=p[i].quantTotal[j]-p[i].quantAlloc[j];
         }
     }
