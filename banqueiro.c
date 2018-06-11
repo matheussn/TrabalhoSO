@@ -198,13 +198,20 @@ void libera()
                     {
                         for(k=0; k<nro_recursos; k++)
                         {
-                            avail[k]+=p[i].quantAlloc[j];
-                            finalizado[i]=1;
-                            flag=1;
+                            avail[k] += p[i].quantAlloc[k];
                         }
+                            finalizado[i] = 1;
+                            flag = 1;
 
                         printf("P%d->",i);
-                        printf("Finalizado\n");
+                        printf("Finalizado\n");     
+                        printf("Disponivel: ");        
+                        
+                        for(k=0; k<nro_recursos; k++){
+                            printf("%d ",avail[k]);
+                        }
+                        
+                        printf("\n\n"); 
 
                         if(finalizado[i]==1)
                         {
@@ -235,10 +242,10 @@ void libera()
 
     if(nro_processos_finalizados==nro_processos)
     {
-        printf("\n Estado seguro\n");
+        printf("\nEstado seguro\n");
     }
     else
     {
-        printf("\n Estado inseguro\n");
+        printf("\nEstado inseguro\n");
     }
 }
