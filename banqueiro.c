@@ -204,8 +204,13 @@ void libera()
                             flag = 1;
 
                         printf("P%d->",i);
-                        printf("Finalizado\n");     
-                        printf("Disponivel: ");        
+                        printf("Finalizado\n"); 
+                        printf("Liberado:");    
+                        for(k=0; k<nro_recursos; k++){
+                            printf("%d ",p[i].quantAlloc[k]);
+                        }
+                        printf("\n");
+                        printf("Total Disponivel: ");        
                         
                         for(k=0; k<nro_recursos; k++){
                             printf("%d ",avail[k]);
