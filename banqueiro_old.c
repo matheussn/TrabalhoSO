@@ -2,11 +2,17 @@
 #include <stdlib.h>
 #include <time.h>
 #include <unistd.h>
-#include "Processos.h"
+
+struct processo
+{
+    int * quantTotal;
+    int * quantAlloc;
+    int * quantNecess;
+};
 
 int *avail;
 int nro_processos,nro_recursos;
-Processo * p;
+struct processo * p;
 
 
 void libera();
@@ -30,7 +36,7 @@ int main(int argc, char **argv)
 
         printf("Numero de recursos:\t %i\n", nro_recursos);
 
-        p = teste(nro_processos);
+        p = malloc(sizeof(struct processo) * nro_processos);
 
         if(p == NULL){
             printf("Ocorreu um erro ao na alocacao:\n");
@@ -38,7 +44,7 @@ int main(int argc, char **argv)
         }
         
         avail = (int *)malloc(sizeof(int) * (argc - 4));            
-    
+        
         printf("Quantidade de recurso INICIALMENTE disponível:\n");
 
         for(i = 4, j = 0 ; i < argc; i++ , j++) {
@@ -86,24 +92,24 @@ int main(int argc, char **argv)
 
         printf("Recursos Disponiveis:\n"); 
         for(j=0; j<nro_recursos; j++)
-                printf("%d ",avail[j]);
+            printf("%d ",avail[j]);
         printf("\n");
 
         requisicao();
 
         printf("Quantidade de recurso que cada processo precisa:\n");        
         for(i=0; i<nro_processos; i++)
-        {   printf("P%d: ",i);     
-            for(j=0; j<nro_recursos; j++)
-            {
-                printf("%d ",p[i].quantNecess[j]);
-            }
-            printf("\n");
+            {   printf("P%d: ",i);     
+        for(j=0; j<nro_recursos; j++)
+        {
+            printf("%d ",p[i].quantNecess[j]);
+        }
+        printf("\n");
 
-        }        
-        libera();
-        return 0;
-    }
+    }        
+    libera();
+    return 0;
+}
 }
 
 
@@ -170,8 +176,8 @@ void libera()
                         {
                             avail[k] += p[i].quantAlloc[k];
                         }
-                            finalizado[i] = 1;
-                            flag = 1;
+                        finalizado[i] = 1;
+                        flag = 1;
 
                         printf("P%d: ",i);
                         printf("Finalizado\n"); 
