@@ -17,7 +17,6 @@ struct processo * p;
 
 void libera();
 void requisicao();
-void showAll();
 int randomico(int a);
 
 int main(int argc, char **argv)
@@ -31,22 +30,22 @@ int main(int argc, char **argv)
 
         nro_processos = atoi(argv[2]);
 
-        printf("Numero de Clientes\t %i \n", nro_processos);
+        printf("Numero de Clientes:\t %i \n", nro_processos);
 
         nro_recursos = argc - 4;
 
-        printf("Numero de recursos\t %i\n", nro_recursos);
+        printf("Numero de recursos:\t %i\n", nro_recursos);
 
         p = malloc(sizeof(struct processo) * nro_processos);
 
         if(p == NULL){
-            printf("Ocorreu um erro ao na alocaçao\n");
+            printf("Ocorreu um erro ao na alocacao:\n");
             exit(-1);
         }
         
         avail = (int *)malloc(sizeof(int) * (argc - 4));            
     
-        printf("Quantidade de recurso INICIALMENTE disponível\n");
+        printf("Quantidade de recurso INICIALMENTE disponível:\n");
 
         for(i = 4, j = 0 ; i < argc; i++ , j++) {
             avail[j] = atoi(argv[i]);
@@ -54,11 +53,12 @@ int main(int argc, char **argv)
         }
         printf("\n");
 
-        printf("Recursos TOTAL ainda necessários\n");
+        printf("TOTAL de Recursos para terminar os processos:\n");
         for(i=0; i<nro_processos; i++)
         {
             p[i].quantTotal = malloc(sizeof(int) * nro_recursos);
             p[i].quantAlloc = malloc(sizeof(int) * nro_recursos);
+            printf("P%d: ",i);
             for(j=0; j<nro_recursos; j++)
             {
                 p[i].quantTotal[j] = randomico(avail[j]);
@@ -69,14 +69,15 @@ int main(int argc, char **argv)
         }
 
 
-        printf("Quantidade de recurso Alocado\n");
+        printf("Quantidade de recurso Alocado:\n");
         for(i=0; i<nro_processos; i++)
         {
+            printf("P%d: ",i);
             for(j=0; j<nro_recursos; j++)
             {
 
                 int a = randomico(avail[j]);
-
+                
                 if(a <= p[i].quantTotal[j])
                 {
                     p[i].quantAlloc[j] = a;
@@ -89,9 +90,23 @@ int main(int argc, char **argv)
             printf("\n");
         }
 
-       requisicao();
-        showAll();
-        
+        printf("Recursos Disponiveis:\n"); 
+        for(j=0; j<nro_recursos; j++)
+                printf("%d ",avail[j]);
+        printf("\n");
+
+        requisicao();
+
+        printf("Quantidade de recurso que cada processo precisa:\n");        
+        for(i=0; i<nro_processos; i++)
+        {   printf("P%d: ",i);     
+            for(j=0; j<nro_recursos; j++)
+            {
+                printf("%d ",p[i].quantNecess[j]);
+            }
+            printf("\n");
+
+        }        
         libera();
         return 0;
     }
@@ -111,46 +126,9 @@ int randomico(int a)
 }
 
 
-void showAll()
-{
-    int i,j;
-    printf("Proc.\t Alocado\t Maximo\t Necess\t Disp.\t");
-    for(i=0; i<nro_processos; i++)
-    {
-        printf("\nP%d\t   ",i);
-        for(j=0; j<nro_recursos; j++)
-        {
-            printf("%d ",p[i].quantAlloc[j]);
-        }
-        printf("\t");
-        for(j=0; j<nro_recursos; j++)
-        {
-            printf("%d ",p[i].quantTotal[j]);
-        }
-        printf("\t");
-        for(j=0; j<nro_recursos; j++)
-        {
-            printf("%d ",p[i].quantNecess[j]);
-        }
-        printf("\t");
-        if(i==0)
-        {
-            for(j=0; j<nro_recursos; j++)
-                printf("%d ",avail[j]);
-        }
-    }
-}
-
-
-
-
 void requisicao()
 {
     int i,j;
-    
-    
-  
-
     for(i=0; i<nro_processos; i++)
     {
         p[i].quantNecess = (int*) malloc (nro_recursos * sizeof(int));
@@ -161,8 +139,6 @@ void requisicao()
             p[i].quantNecess[j]=p[i].quantTotal[j]-p[i].quantAlloc[j];
         }
     }
-    printf("\n");
-
 }
 
 
@@ -203,14 +179,14 @@ void libera()
                             finalizado[i] = 1;
                             flag = 1;
 
-                        printf("P%d->",i);
+                        printf("P%d: ",i);
                         printf("Finalizado\n"); 
-                        printf("Liberado:");    
+                        printf("Liberado: ");    
                         for(k=0; k<nro_recursos; k++){
                             printf("%d ",p[i].quantAlloc[k]);
                         }
                         printf("\n");
-                        printf("Total Disponivel: ");        
+                        printf("total Disponivel: ");        
                         
                         for(k=0; k<nro_recursos; k++){
                             printf("%d ",avail[k]);
@@ -237,7 +213,7 @@ void libera()
         }
         else
         {
-            printf("P%d->",i);
+            printf("P%d: ",i);
             printf("NaoFinalizado\n");
         }
     }
