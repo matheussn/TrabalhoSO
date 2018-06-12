@@ -70,11 +70,11 @@ void * threadsTest(void * arg){
     /*while(true){
         //Requisitar recurso
 
-        //Dormir
+        //Dormir sleep(random() % 3);
 
         //Liberar um subconjunto de recursos alocados
 
-        //Dormir
+        //Dormir sleep(random() % 3);
     }*/
 }
 
