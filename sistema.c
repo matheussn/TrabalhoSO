@@ -1,27 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-#include <unistd.h>
+#include <pthread.h>
+#include <semaphore.h>
 #include "Processos.h"
+
+/* Semáforos */
+
+sem_t mutex_init;
 
 int *avail;
 int nro_processos,nro_recursos;
 Processo * p;
 
-
-void libera();
-void requisicao();
-int randomico(int a);
+void * threadsTest(void *);
 
 int main(int argc, char **argv)
 {
     int i,j;
     int a;
 
+    pthread_t *tid;
+
+
     if(argc > 5)
     {
-
-
         nro_processos = atoi(argv[2]);
 
         printf("Numero de Clientes:\t %i \n", nro_processos);
@@ -29,16 +31,9 @@ int main(int argc, char **argv)
         nro_recursos = argc - 4;
 
         printf("Numero de recursos:\t %i\n", nro_recursos);
-
-        p = teste(nro_processos);
-
-        if(p == NULL){
-            printf("Ocorreu um erro ao na alocacao:\n");
-            exit(-1);
-        }
         
         avail = (int *)malloc(sizeof(int) * (argc - 4));            
-    
+
         printf("Quantidade de recurso INICIALMENTE disponível:\n");
 
         for(i = 4, j = 0 ; i < argc; i++ , j++) {
@@ -47,180 +42,39 @@ int main(int argc, char **argv)
         }
         printf("\n");
 
-        printf("TOTAL de Recursos para terminar os processos:\n");
-        for(i=0; i<nro_processos; i++)
-        {
-            p[i].quantTotal = malloc(sizeof(int) * nro_recursos);
-            p[i].quantAlloc = malloc(sizeof(int) * nro_recursos);
-            printf("P%d: ",i);
-            for(j=0; j<nro_recursos; j++)
-            {
-                p[i].quantTotal[j] = randomico(avail[j]);
-                p[i].quantAlloc[j] = 0;
-                printf("%d ",p[i].quantTotal[j]);
-            }
-            printf("\n");
+        sem_init(&mutex_init, 0, 1);
+
+        tid = (pthread_t *) malloc(sizeof(pthread_t) * nro_processos);
+
+        for(i = 0; i < nro_processos; i ++){
+            //crate threads
+            pthread_create(&tid[i], NULL,threadsTest, &i);
         }
-
-
-        printf("Quantidade de recurso Alocado:\n");
-        for(i=0; i<nro_processos; i++)
-        {
-            printf("P%d: ",i);
-            for(j=0; j<nro_recursos; j++)
-            {
-
-                int a = randomico(avail[j]);
-                
-                if(a <= p[i].quantTotal[j])
-                {
-                    p[i].quantAlloc[j] = a;
-                    printf("%d ",p[i].quantAlloc[j]);
-                    avail[j] = avail[j] - p[i].quantAlloc[j];
-                }
-                else
-                    j--;
-            }
-            printf("\n");
-        }
-
-        printf("Recursos Disponiveis:\n"); 
-        for(j=0; j<nro_recursos; j++)
-                printf("%d ",avail[j]);
-        printf("\n");
-
-        requisicao();
-
-        printf("Quantidade de recurso que cada processo precisa:\n");        
-        for(i=0; i<nro_processos; i++)
-        {   printf("P%d: ",i);     
-            for(j=0; j<nro_recursos; j++)
-            {
-                printf("%d ",p[i].quantNecess[j]);
-            }
-            printf("\n");
-
-        }        
-        libera();
-        return 0;
-    }
-}
-
-
-int randomico(int a)
-{
-
-    sleep(1);
-    int x;
-    srand( (unsigned)time(NULL));
-
-    x =  ( rand() % a );
-
-    return x;
-}
-
-
-void requisicao()
-{
-    int i,j;
-    for(i=0; i<nro_processos; i++)
-    {
-        p[i].quantNecess = (int*) malloc (nro_recursos * sizeof(int));
-
-        for(j=0; j<nro_recursos; j++)
-        {
-
-            p[i].quantNecess[j]=p[i].quantTotal[j]-p[i].quantAlloc[j];
+        for(i = 0; i < nro_processos; i ++){
+            //crate threads
+            pthread_join(tid[i], NULL);
         }
     }
 }
 
+void * threadsTest(void * arg){
 
-void libera()
-{
-    int i,j;
-    int *finalizado,flag=1,k,nro_processos_finalizados=0;
+    sem_wait(&mutex_init);
+        int * i = (int *) arg;
+        p = init_Thread(avail,nro_recursos);
+        printf("TOTAL de Recursos para terminar o processo:\n");
+        need(p);
+    sem_post(&mutex_init);
+    
 
-    finalizado = malloc(nro_processos * sizeof(int));
+    /*while(true){
+        //Requisitar recurso
 
-    for(i=0; i<nro_processos; i++)
-    {
-        finalizado[i]=0;
-    }
+        //Dormir
 
-    printf("\n\n");
+        //Liberar um subconjunto de recursos alocados
 
-
-    while(flag)
-    {
-        flag=0;
-
-        for(i=0; i<nro_processos; i++)
-        {
-            int percorreu_todos_recursos=0;
-
-            for(j=0; j<nro_recursos; j++)
-            {
-                if((finalizado[i]==0)&&(p[i].quantNecess[j] <= avail[j]))
-                {
-                    percorreu_todos_recursos++;
-                    if(percorreu_todos_recursos == nro_recursos)
-                    {
-                        for(k=0; k<nro_recursos; k++)
-                        {
-                            avail[k] += p[i].quantAlloc[k];
-                        }
-                            finalizado[i] = 1;
-                            flag = 1;
-
-                        printf("P%d: ",i);
-                        printf("Finalizado\n"); 
-                        printf("Liberado: ");    
-                        for(k=0; k<nro_recursos; k++){
-                            printf("%d ",p[i].quantAlloc[k]);
-                        }
-                        printf("\n");
-                        printf("total Disponivel: ");        
-                        
-                        for(k=0; k<nro_recursos; k++){
-                            printf("%d ",avail[k]);
-                        }
-                        
-                        printf("\n\n"); 
-
-                        if(finalizado[i]==1)
-                        {
-                            i=nro_processos;
-                        }
-                    }
-                }
-            }
-            
-        }
-    }
-
-    for(i=0; i<nro_processos; i++)
-    {
-        if(finalizado[i]==1)
-        {
-            nro_processos_finalizados++;
-        }
-        else
-        {
-            printf("P%d: ",i);
-            printf("NaoFinalizado\n");
-        }
-    }
-
-
-
-
-    if(nro_processos_finalizados==nro_processos)
-    {
-        printf("\nEstado seguro\n");
-    }
-    else
-    {
-        printf("\nEstado inseguro\n");
-    }
+        //Dormir
+    }*/
 }
+

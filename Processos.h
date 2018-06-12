@@ -1,5 +1,7 @@
 typedef struct processo Processo;
 
-//Processo init_Thread();
+Processo * init_Thread(int quant[], int cont);
 
-Processo * teste(int n);
+int randomico(int a);
+
+void need(Processo * p);
