@@ -51,7 +51,7 @@ int main(int argc, char **argv)
             pthread_create(&tid[i], NULL,threadsTest, &i);
         }
         for(i = 0; i < nro_processos; i ++){
-            //crate threads
+            //espera as threads
             pthread_join(tid[i], NULL);
         }
     }
