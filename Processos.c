@@ -14,7 +14,7 @@ struct processo {
 int qnt;
 int pid = 0;
 
-Processo * init_Thread(int quant[], int cont){
+int init_Thread(int quant[], int cont){
 	int j;
 	qnt = cont;
 
@@ -29,7 +29,7 @@ Processo * init_Thread(int quant[], int cont){
 		p->quantAlloc[j] = 0;
 	}
 	pid ++;
-	return p;
+	return p->pid;
 }
 
 int randomico(int a){
@@ -42,10 +42,10 @@ int randomico(int a){
 	return x;
 }
 
-void need(Processo * p){
+/*void need(Processo * p){
 	int i;
 	for(i = 0; i < qnt; i ++){
 		printf("%d ", p->quantTotal[i]);
 	}
 	printf("\n");
-}
+}*/
