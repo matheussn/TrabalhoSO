@@ -13,14 +13,15 @@ sem_t mutex_res;
 
 int *avail;
 int nro_processos,nro_recursos;
-int p;
-
+	void * k;
 void * threadsTest(void *);
 
 int main(int argc, char **argv)
 {
     int i,j;
     int a;
+
+	int num;
 
     pthread_t *tid;
 
@@ -54,7 +55,8 @@ int main(int argc, char **argv)
             //create threads
             pthread_create(&tid[i], NULL,threadsTest, &i);
         }
-        for(i = 0; i < nro_processos; i ++){
+		
+        for(i = 0, num = nro_processos; i < nro_processos; i ++){
             //espera as threads
             pthread_join(tid[i], NULL);
         }
@@ -62,7 +64,7 @@ int main(int argc, char **argv)
 }
 
 void * threadsTest(void * arg){
-
+int p;
     sem_wait(&mutex_init);
     int * i = (int *) arg;
     p = init_Thread(avail,nro_recursos);
@@ -77,6 +79,7 @@ void * threadsTest(void * arg){
         printf("P%d", p);
         if(requisicao_recursos(p,NULL) == -1){
             sem_post(&mutex_res);
+				printf("P%d Morreu!\n", p);
             pthread_exit(NULL);
         }
         sem_post(&mutex_res);
