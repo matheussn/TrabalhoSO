@@ -82,7 +82,7 @@ void * threadsTest(void * arg){
         sem_post(&mutex_res);
 
         //Dormir sleep(random() % 3);
-        sleep(random() % 3);
+        sleep(rand() % 3);
 
         //Liberar um subconjunto de recursos alocados
         sem_wait(&mutex_res);
@@ -90,7 +90,7 @@ void * threadsTest(void * arg){
         libera_recursos(p,NULL);
         sem_post(&mutex_res);
         //Dormir sleep(random() % 3);
-        sleep(random() % 3);
+        sleep(rand() % 3);
     }
 }
 
