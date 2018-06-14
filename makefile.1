@@ -1,0 +1,5 @@
+CC=gcc
+CFLAGS=-I.
+
+banqueiro: Banqueiro.o Processos.o
+   $(CC) -o banqueiro sistema.c Banqueiro.o	Processos.o $(CFLAGS)
