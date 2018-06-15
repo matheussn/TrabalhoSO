@@ -8,42 +8,57 @@ int requisicao_recursos(int pid, int recursos[]){
     int i, j;
     int x;
  /*   
-    int * flag = (int *) malloc (nro_processo * sizeof(int));
-        for(i = 0; i < nro_processo; i++)
-            flag[i] = 0;
-    
 
-    for(i = 0; i < dados->nro_processo; i++)
+    int flag2 = 0;
+    for(i = 0; i < nro_recurso; i++)
+        if(dados->disponivel[i] >= recurso[i])//verificando se tem recurso disponivel para atender a requisicao
+            flag2++;
+
+    if(flag2 == nro_recurso -1)
     {
-        for(j = 0; j< dados->nro_recurso; j++)
-        {
-            if (dados->processos[i].quantNecess[j] < recursos[j])
-                flag[i]++;        
-        }       
-    }
+        int * flag = (int *) malloc (nro_processo * sizeof(int));
+            for(i = 0; i < nro_processo; i++)
+                flag[i] = 0;
+        
 
-    for(i = 0; i<nro_processo; i++)
-        if(flag[i] == nro_recurso)
+        for(i = 0; i < dados->nro_processo; i++)
         {
-            // estado seguro, é possivel alocar.
-            return -1;   
+            for(j = 0; j< dados->nro_recurso; j++)
+            {
+                if (dados->processos[i].quantNecess[j] < recursos[j]) 
+                    flag[i]++;        
+            }       
         }
-    
-    
-    //Não foi possivel alocar.
+
+        for(i = 0; i<nro_processo; i++)
+            if(flag[i] == nro_recurso)verificando se mesmo atendendo a requisicao o banqueiro estará no estado seguro
+            {
+                // estado seguro, é possivel alocar.
+                return -1;   
+            }
+        
+        
+        //Não foi possivel alocar.
+    */
+
+	    srand( (unsigned)time(NULL));
+
+	    x =  ( rand() % 10 );
+
+	    if(x > 5){
+		    printf("Recurso alocado! \n");  
+		    return 0;
+	    }else{
+		    printf("Recurso não alocado! \n");
+		    return -1;
+	    }
+    /*}
+    else
+    {
+       printf("Recurso não alocado! \n");
+	   return -1;
+    }  
 */
-
-	srand( (unsigned)time(NULL));
-
-	x =  ( rand() % 10 );
-
-	if(x > 5){
-		printf("Recurso alocado! \n");
-		return 0;
-	}else{
-		printf("Recurso não alocado! \n");
-		return -1;
-	}
 }
 
 int libera_recursos(int pid, int recursos[]){
@@ -55,20 +70,10 @@ int libera_recursos(int pid, int recursos[]){
         if(dados->processo.quantNecess[i] == 0)
             flag++;
 */    
-//    if(flag == nro_recurso - 1)
+//    if(flag == nro_recurso)
         printf("Recursos Liberados com sucesso\n");
 //    else
 //        printf("Processo não finalizado\n");
-
-
-
-
-
-
-
-
-
-	
 	return 0;
 
 }
