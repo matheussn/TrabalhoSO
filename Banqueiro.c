@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-#include "Banqueiro.h"
+#include "Dados.h"
 
 int requisicao_recursos(int pid, int recursos[]){
     int x;

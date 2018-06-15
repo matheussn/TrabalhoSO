@@ -1,6 +1,4 @@
-typedef struct processo Processo;
-
-int init_Thread(int quant[], int cont);
+int init_Thread(int quant[]);
 
 int randomico(int a);
 
