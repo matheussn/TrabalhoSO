@@ -34,11 +34,3 @@ int randomico(int a){
 
 	return x;
 }
-
-/*void need(Processo * p){
-	int i;
-	for(i = 0; i < qnt; i ++){
-		printf("%d ", p->quantTotal[i]);
-	}
-	printf("\n");
-}*/
