@@ -9,15 +9,27 @@ int randomico(int a);
 int pid = 0;
 
 int init_Thread(int quant[]){
+
 	int j;
+
 	dados->processo[pid].quantTotal = (int *) malloc(sizeof(int) * dados->nro_recurso);
+    if(dados->processo[pid].quantTotal == NULL)
+        return -2;
+
 	dados->processo[pid].quantAlloc = (int *) malloc(sizeof(int) * dados->nro_recurso);
+    if(dados->processo[pid].quantAlloc == NULL)
+        return -2;
+
 	dados->processo[pid].quantNecess = (int *) malloc(sizeof(int) * dados->nro_recurso);
+    if(dados->processo[pid].quantNecess == NULL)
+        return -2;
+
 	dados->processo[pid].pid = pid;
 
 
 
-	for(j = 0; j < dados->nro_recurso; j ++){
+	for(j = 0; j < dados->nro_recurso; j ++)
+    {
 		dados->processo[pid].quantNecess[j] = dados->processo[pid].quantTotal[j] = randomico(quant[j]);
 		dados->processo[pid].quantAlloc[j] = 0;
 	}

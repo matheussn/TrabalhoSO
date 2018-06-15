@@ -17,4 +17,4 @@ typedef struct dados Dados;
 
 Dados * dados;
 
-void init_Dados(int total[], int nroProcesso, int nroRecurso);
+int init_Dados(int total[], int nroProcesso, int nroRecurso);

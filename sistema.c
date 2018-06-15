@@ -44,7 +44,11 @@ int main(int argc, char **argv)
         }
         printf("\n");
 
-        init_Dados(avail, nro_processos, nro_recursos);
+        int verifica = init_Dados(avail, nro_processos, nro_recursos);
+        if( verifica == 0)
+        {
+               fprintf(stderr," falha na alocação");
+        }
 
         sem_init(&mutex_init, 0, 1);
         sem_init(&mutex_res, 0, 1);
@@ -68,7 +72,13 @@ void * threadsTest(void * arg){
     int rec[nro_recursos];
 
     sem_wait(&mutex_init);
+
     p = init_Thread(avail);
+    if(p == -2)
+    {
+           fprintf(stderr," falha na alocação");
+    }        
+
     //printf("TOTAL de Recursos para terminar o processo:\n");
     printf("P%d:\n", p);
     //need(p);
