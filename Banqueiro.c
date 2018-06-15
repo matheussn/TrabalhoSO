@@ -73,7 +73,7 @@ int libera_recursos(int pid, int recursos[]){
 	if(flag == dados->nro_recurso - 1)
 	{
 		for(i = 0; i<dados->nro_recurso; i++)
-			dados->disponivel[i] = recursos[i];
+			dados->disponivel[i] += recursos[i];
 		printf("Recursos Liberados com sucesso\n");
 	}
 	else
