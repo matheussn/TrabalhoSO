@@ -10,14 +10,14 @@ int requisicao_recursos(int pid, int recursos[]){
  /*   
 
     int flag2 = 0;
-    for(i = 0; i < nro_recurso; i++)
+    for(i = 0; i < dados->nro_recurso; i++)
         if(dados->disponivel[i] >= recurso[i])//verificando se tem recurso disponivel para atender a requisicao
             flag2++;
 
-    if(flag2 == nro_recurso -1)
+    if(flag2 == dados->nro_recurso -1)
     {
-        int * flag = (int *) malloc (nro_processo * sizeof(int));
-            for(i = 0; i < nro_processo; i++)
+        int * flag = (int *) malloc (dados->nro_processo * sizeof(int));
+            for(i = 0; i < dados->nro_processo; i++)
                 flag[i] = 0;
         
 
@@ -30,8 +30,8 @@ int requisicao_recursos(int pid, int recursos[]){
             }       
         }
 
-        for(i = 0; i<nro_processo; i++)
-            if(flag[i] == nro_recurso)verificando se mesmo atendendo a requisicao o banqueiro estará no estado seguro
+        for(i = 0; i<dados->nro_processo; i++)
+            if(flag[i] == dados->nro_recurso)verificando se mesmo atendendo a requisicao o banqueiro estará no estado seguro
             {
                 // estado seguro, é possivel alocar.
                 return -1;   
@@ -66,14 +66,19 @@ int libera_recursos(int pid, int recursos[]){
 
 //    int flag = 0
 
-/*    for (int i = 0 ; i< nro_recurso; i++)    
+/*    for (int i = 0 ; i< dados->nro_recurso; i++)    
         if(dados->processo.quantNecess[i] == 0)
             flag++;
-*/    
-//    if(flag == nro_recurso)
-        printf("Recursos Liberados com sucesso\n");
-//    else
-//        printf("Processo não finalizado\n");
+    
+    if(flag == dados->nro_recurso - 1)
+      {
+        for(i = 0; i<dados->nro_recurso; i++)
+            dados->disponivel[i] = recursos[i];
+*/             printf("Recursos Liberados com sucesso\n");
+//      }       
+//    
+//        else
+//        printf("Processo não finalizado\n");	
 	return 0;
 
 }
