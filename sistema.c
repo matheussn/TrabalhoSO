@@ -70,6 +70,7 @@ void * threadsTest(void * arg){
     sem_wait(&mutex_init);
     p = init_Thread(avail);
     //printf("TOTAL de Recursos para terminar o processo:\n");
+    printf("P%d:\n", p);
     //need(p);
     sem_post(&mutex_init);
 
@@ -77,12 +78,8 @@ void * threadsTest(void * arg){
     while(1){
         //Requisitar recurso
         sem_wait(&mutex_res);
-
-        for(i = 0; i < nro_recursos; i ++){
-            rec[i] = randomico(avail[i]);
-        }
         printf("P%d", p);
-        if(requisicao_recursos(p,rec) == -1){
+        if(requisicao_recursos(p,dados->processo[p].quantTotal) == -1){
             sem_post(&mutex_res);
             printf("P%d Morreu!\n", p);
             pthread_exit(NULL);

@@ -34,3 +34,11 @@ int randomico(int a){
 
 	return x;
 }
+
+void need(int p){
+	int i;
+	for(i = 0; i < dados->nro_recurso; i ++){
+		printf("%d ", dados->processo[p].quantTotal[i]);
+	}
+	printf("\n");
+}
