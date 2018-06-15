@@ -48,7 +48,27 @@ int requisicao_recursos(int pid, int recursos[]){
 
 int libera_recursos(int pid, int recursos[]){
 
-	printf("Recursos Liberados com sucesso\n");
+
+//    int flag = 0
+
+/*    for (int i = 0 ; i< nro_recurso; i++)    
+        if(dados->processo.quantNecess[i] == 0)
+            flag++;
+*/    
+//    if(flag == nro_recurso - 1)
+        printf("Recursos Liberados com sucesso\n");
+//    else
+//        printf("Processo não finalizado\n");
+
+
+
+
+
+
+
+
+
+	
 	return 0;
 
 }
