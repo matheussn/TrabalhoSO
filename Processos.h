@@ -1,4 +1,4 @@
-int init_Thread(int quant[]);
+int init_Thread();
 
 int randomico(int a);
 

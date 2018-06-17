@@ -18,3 +18,4 @@ typedef struct dados Dados;
 Dados * dados;
 
 int init_Dados(int total[], int nroProcesso, int nroRecurso);
+int randomico(int a);

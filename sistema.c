@@ -43,8 +43,11 @@ int main(int argc, char **argv)
             printf("%i ", avail[j]);
         }
         printf("\n");
+	
+	
 
         int verifica = init_Dados(avail, nro_processos, nro_recursos);
+
         if( verifica == 0)
         {
                fprintf(stderr," falha na alocação");
@@ -68,30 +71,21 @@ int main(int argc, char **argv)
 }
 
 void * threadsTest(void * arg){
-    int p, i;
-    int rec[nro_recursos];
+    int  i;
+    int *p = (int*) arg;	
+    int *rec = (int *) malloc (nro_recursos * sizeof(int)) ;
 
-    sem_wait(&mutex_init);
+    sem_wait(&mutex_init);   
 
-    p = init_Thread(avail);
-    if(p == -2)
-    {
-           fprintf(stderr," falha na alocação");
-    }        
-
-    //printf("TOTAL de Recursos para terminar o processo:\n");
-    printf("P%d:\n", p);
-    //need(p);
     sem_post(&mutex_init);
-
 
     while(1){
         //Requisitar recurso
         sem_wait(&mutex_res);
-        printf("P%d", p);
-        if(requisicao_recursos(p,dados->processo[p].quantTotal) == -1){
+        printf("P%d 1\n", *p);
+        if(requisicao_recursos(*p,dados->processo[*p].quantTotal) == -1){
             sem_post(&mutex_res);
-            printf("P%d Morreu!\n", p);
+            printf("P%d Morreu!\n", *p);
             pthread_exit(NULL);
         }
         sem_post(&mutex_res);
@@ -104,9 +98,10 @@ void * threadsTest(void * arg){
         for(i = 0; i < nro_recursos; i ++){
             rec[i] = randomico(avail[i]);
         }
-        printf("P%d", p);
-        libera_recursos(p,rec);
+        printf("P%d 2\n", *p);
+        libera_recursos(*p,rec);
         sem_post(&mutex_res);
+
         //Dormir sleep(random() % 3);
         sleep(rand() % 3);
     }
