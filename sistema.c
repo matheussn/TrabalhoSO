@@ -73,7 +73,7 @@ int main(int argc, char **argv)
 void * threadsTest(void * arg){
     int  i;
     int p;
-    int *rec = (int *) malloc (nro_recursos * sizeof(int)) ;
+    int rec[] = {1,1,1};
 
     sem_wait(&mutex_init);
 
@@ -83,11 +83,12 @@ void * threadsTest(void * arg){
 
     while(1){
         //Requisitar recurso
-        sem_wait(&mutex_res);
-        printf("P%d 1\n", p);
+        sem_wait(&mutex_res);        
+        
         if(requisicao_recursos(p,dados->processo[p].quantTotal) == -1){
-            sem_post(&mutex_res);
+            kill_thread(p);
             printf("P%d Morreu!\n", p);
+            sem_post(&mutex_res);
             pthread_exit(NULL);
         }
         sem_post(&mutex_res);

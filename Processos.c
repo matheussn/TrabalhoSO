@@ -4,8 +4,6 @@
 #include <unistd.h>
 #include "Dados.h"
 
-int randomico(int a);
-
 int pid = 0;
 
 int init_Thread(){
@@ -13,4 +11,6 @@ int init_Thread(){
 	return dados->processo[pid++].pid;
 }
 
-
+void kill_thread(int p){
+	dados->processo[p].status = -1;
+}

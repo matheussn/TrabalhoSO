@@ -53,6 +53,7 @@ int init_Dados(int total[], int nroProcesso, int nroRecurso){
 			return 0;
 
 		dados->processo[pid].pid = pid;
+		dados->processo[pid].status = 0;
 	}
 
 	for( pid = 0; pid < nroProcesso; pid++)
