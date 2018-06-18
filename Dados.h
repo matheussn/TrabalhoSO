@@ -3,7 +3,7 @@ struct processo {
 	int status; /* 0=> Vivo -1=> Morto*/
 	int * quantTotal;
 	int * quantAlloc;
-	int * quantNecess; /*Rever a necessidade desse atributo*/
+	int * quantNecess;
 };
 
 typedef struct processo Processo;

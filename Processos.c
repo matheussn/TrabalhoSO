@@ -2,32 +2,42 @@
 #include <stdio.h>
 #include <time.h>
 #include <unistd.h>
+#include <pthread.h>
 #include "Dados.h"
 #include "Banqueiro.h"
 
 int pid = 0;
+void verifica_recursos(int p);
+
 
 int init_Thread(){
 	return dados->processo[pid++].pid;
 }
 
 void kill_thread(int p){
-	int flag = 0;
+	int flag = 0, flag2 = 0;
 	int i = libera_recursos(p, dados->processo[p].quantAlloc);
 	dados->processo[p].status = -1;
 	for(i = 0; i < dados->nro_processo; i ++){
 		if(dados->processo[i].status == 0)
+		{
+			flag2 = i;
 			flag ++;
+		}
+			
 	}
 
 	printf("Threads Ativas: %d\n", flag);
 	if(flag <= 1){
-		printf("Finalizando processo...\n");
+		printf("Finalizando processo...\n");		
+		i = libera_recursos(dados->processo[flag2].pid, dados->processo[flag2].quantAlloc);
 		exit(-1);
 	}
 }
 
 int * rand_req(int p){
+
+	verifica_recursos(p);
 	/* 0 <= req <= quantTotal - quantAlloc*/
 	int i, k, flag = 0;
 
@@ -59,4 +69,23 @@ int * rand_lib(int p){
 	}
 
 	return rec;
+}
+
+void verifica_recursos(int p){
+	
+	int flag = 0;
+
+
+	for(int i = 0; i < dados->nro_recurso ; i++ )
+		if(dados->processo[p].quantNecess[i] ==	0)
+		{
+			flag++;
+		}	
+		
+	if(flag == dados->nro_recurso)
+	{
+		printf("P[%d] terminou \n", p);
+		kill_thread(p);
+		pthread_exit(NULL);
+	}
 }
