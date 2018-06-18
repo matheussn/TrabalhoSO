@@ -26,15 +26,16 @@ int requisicao_recursos(int pid, int recursos[]){
 
 	/* Verificar se temos recursos para atender a requisição (disp >= rec) */
 	int flag2 = 0;
-	for(i = 0; i < dados->nro_recurso; i++)
+	for(i = 0; i < dados->nro_recurso; i++){
 		if(dados->disponivel[i] >= recursos[i])
 			flag2++;
+	}
 
 	if(flag2 == dados->nro_recurso )
 	{
 		/* Simular alocação dos recursos requeridos! */
 		int * flag = (int *) malloc (dados->nro_recurso * sizeof(int));
-		
+
 		for(i = 0; i < dados->nro_recurso; i++)
 			flag[i] = dados->disponivel[i] - recursos[i];
 
@@ -52,15 +53,50 @@ int requisicao_recursos(int pid, int recursos[]){
 
 			if(k == dados->nro_recurso){
 				/* Alocar Recursos */
-				printf("ALOCA DANADA!\n");
+				printf("P%d: Recurso alocado! \n", pid);
+				printf("\tQuantidade de recursos requeridos: \n\t");
+				for(j = 0; j < dados->nro_recurso; j ++){
+					printf("%d ", recursos[j]);
+				}
+				printf("\n\tQuantidade de recursos disponivel no sistema: \n\t");
+				for(j = 0; j < dados->nro_recurso; j ++){
+					printf("%d ", dados->disponivel[j]);
+				}
+				printf("\n\tQuantidade de recursos após a alocação: \n\t");
+				for(j = 0; j < dados->nro_recurso; j ++){
+					dados->disponivel[j] -= recursos[j];
+					printf("%d ", dados->disponivel[j]);
+				}
+				printf("\n");
 				return 0;
 			}
 		}
+
+		printf("P%d: Recurso Não alocado! \n", pid);
+		printf("\tQuantidade de recursos requeridos: \n\t");
+		for(j = 0; j < dados->nro_recurso; j ++){
+			printf("%d ", recursos[j]);
+		}
+		printf("\n\tQuantidade de recursos disponivel no sistema: \n\t");
+		for(j = 0; j < dados->nro_recurso; j ++){
+			printf("%d ", dados->disponivel[j]);
+		}
+		printf("\n");
+
 		return -1;
 	}
 	else
 	{
-		printf("P%d: Recurso não alocado! \n", pid);
+		printf("P%d: Recurso Não alocado! \n", pid);
+		printf("\tQuantidade de recursos requeridos: \n\t");
+		for(j = 0; j < dados->nro_recurso; j ++){
+			printf("%d ", recursos[j]);
+		}
+		printf("\n\tQuantidade de recursos disponivel no sistema: \n\t");
+		for(j = 0; j < dados->nro_recurso; j ++){
+			printf("%d ", dados->disponivel[j]);
+		}
+		printf("\n");
 		return -1;
 	}
 }
