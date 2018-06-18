@@ -15,20 +15,20 @@ int init_Dados(int total[], int nroProcesso, int nroRecurso){
 	int pid; 
 	
 	dados = (Dados *) malloc(sizeof(Dados));
-    	if(dados == NULL)
-        	return 0;
+	if(dados == NULL)
+		return 0;
 	
 	dados->disponivel = (int *) malloc(sizeof(int) * nroRecurso);
-    	if(dados->disponivel == NULL)
-        	return 0;
+	if(dados->disponivel == NULL)
+		return 0;
 	
-    	dados->total = (int *) malloc(sizeof(int) * nroRecurso);
-    	if(dados->total == NULL)
-       		return 0;
+	dados->total = (int *) malloc(sizeof(int) * nroRecurso);
+	if(dados->total == NULL)
+		return 0;
 
 	dados->processo = (Processo *) malloc(sizeof(Processo) * nroProcesso);
-   	if(dados->processo == NULL)
-        	return 0;
+	if(dados->processo == NULL)
+		return 0;
 
 	dados->nro_recurso = nroRecurso;
 
@@ -56,22 +56,23 @@ int init_Dados(int total[], int nroProcesso, int nroRecurso){
 		dados->processo[pid].status = 0;
 	}
 
-	for( pid = 0; pid < nroProcesso; pid++)
+	for( pid = 0; pid < nroProcesso; pid++){
 		for(j = 0; j < nroRecurso; j ++)
-	    	{
+		{
 			dados->processo[pid].quantNecess[j] = dados->processo[pid].quantTotal[j] = randomico(total[j]);
 			dados->processo[pid].quantAlloc[j] = 0;
 		}
-    return 1;
-	
+	}
+	return 1;
+
 }
 
 int randomico(int a){
 
 	time_t t;
 	int x;
-	
-	srand( (unsigned) a - rand() + time(NULL));
+
+	srand( (unsigned) (a *rand()) +(rand()* time(NULL)));
 	x = (rand() % a ) ;
 	return x;
 }

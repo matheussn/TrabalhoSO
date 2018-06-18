@@ -43,14 +43,11 @@ int main(int argc, char **argv)
             printf("%i ", avail[j]);
         }
         printf("\n");
-	
-	
 
         int verifica = init_Dados(avail, nro_processos, nro_recursos);
 
-        if( verifica == 0)
-        {
-               fprintf(stderr," falha na alocação");
+        if( verifica == 0){
+            fprintf(stderr," falha na alocação");
         }
 
         sem_init(&mutex_init, 0, 1);
@@ -59,12 +56,10 @@ int main(int argc, char **argv)
         tid = (pthread_t *) malloc(sizeof(pthread_t) * nro_processos);
 
         for(i = 0; i < nro_processos; i ++){
-            //create threads
             pthread_create(&tid[i], NULL,threadsTest, &i);
         }
 
         for(i = 0; i < nro_processos; i ++){
-            //espera as threads
             pthread_join(tid[i], NULL);
         }
     }
@@ -73,7 +68,7 @@ int main(int argc, char **argv)
 void * threadsTest(void * arg){
     int  i;
     int p;
-    int rec[nro_recursos];
+    int * rec;
 
     sem_wait(&mutex_init);
 
@@ -84,10 +79,7 @@ void * threadsTest(void * arg){
     while(1){
         //Requisitar recurso
         sem_wait(&mutex_res);
-        for(i = 0; i < nro_recursos; i ++){
-            rec[i] = randomico(avail[i]);
-        }
-        
+        rec = rand_req(p);
         if(requisicao_recursos(p,rec) == -1){
             kill_thread(p);
             printf("P%d Morreu!\n", p);
@@ -101,9 +93,8 @@ void * threadsTest(void * arg){
 
         //Liberar um subconjunto de recursos alocados
         sem_wait(&mutex_res);
-        for(i = 0; i < nro_recursos; i ++){
-            rec[i] = randomico(avail[i]);
-        }
+
+        rec = rand_lib(p);
         libera_recursos(p,rec);
         sem_post(&mutex_res);
 
