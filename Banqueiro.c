@@ -46,7 +46,7 @@ int requisicao_recursos(int pid, int recursos[]){
 			int k=0;
 			for(j = 0; j< dados->nro_recurso; j++)
 			{
-				if (flag[j] >= dados->processo[i].quantTotal[j])
+				if (flag[j] >= (dados->processo[i].quantTotal[j] - dados->processo[i].quantAlloc[j]))
 					k++;
 			}
 
@@ -61,11 +61,16 @@ int requisicao_recursos(int pid, int recursos[]){
 				for(j = 0; j < dados->nro_recurso; j ++){
 					printf("%d ", dados->disponivel[j]);
 				}
-				printf("\n\tQuantidade de recursos após a alocação: \n\t");
+				printf("\n\tQuantidade de recursos do sistema após a alocação: \n\t");
 				for(j = 0; j < dados->nro_recurso; j ++){
 					dados->disponivel[j] -= recursos[j];
 					printf("%d ", dados->disponivel[j]);
+				}
+				printf("\n");
+				printf("\n\tQuantidade de recursos do processo após a alocação: \n\t");
+				for(j = 0; j < dados->nro_recurso; j ++){
 					dados->processo[pid].quantAlloc[j] += recursos[j];
+					printf("%d ", dados->processo[pid].quantAlloc[j]);
 				}
 				printf("\n");
 				return 0;
@@ -114,8 +119,10 @@ int libera_recursos(int pid, int recursos[]){
 
 	// if(flag == dados->nro_recurso - 1)
 	// {
-	for(i = 0; i<dados->nro_recurso; i++)
+	for(i = 0; i<dados->nro_recurso; i++){
 		dados->disponivel[i] += recursos[i];
+		dados->processo[pid].quantAlloc[i] -= recursos[i];
+	}
 	printf("P%d: Recursos Liberados com sucesso\n", pid);
 
 	printf("\tQuantidade de recursos a liberar: \n\t");

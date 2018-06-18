@@ -57,11 +57,14 @@ int init_Dados(int total[], int nroProcesso, int nroRecurso){
 	}
 
 	for( pid = 0; pid < nroProcesso; pid++){
+		printf("P%d: ", pid);
 		for(j = 0; j < nroRecurso; j ++)
 		{
 			dados->processo[pid].quantNecess[j] = dados->processo[pid].quantTotal[j] = randomico(total[j]);
 			dados->processo[pid].quantAlloc[j] = 0;
+			printf("%d ", dados->processo[pid].quantTotal[j]);
 		}
+		printf("\n");
 	}
 	return 1;
 
