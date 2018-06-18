@@ -66,7 +66,6 @@ int requisicao_recursos(int pid, int recursos[]){
 					dados->disponivel[j] -= recursos[j];
 					printf("%d ", dados->disponivel[j]);
 				}
-				printf("\n");
 				printf("\n\tQuantidade de recursos do processo após a alocação: \n\t");
 				for(j = 0; j < dados->nro_recurso; j ++){
 					dados->processo[pid].quantAlloc[j] += recursos[j];
