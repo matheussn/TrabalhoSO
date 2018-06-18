@@ -12,7 +12,15 @@ int init_Thread(){
 }
 
 void kill_thread(int p){
-	int i = libera_recursos(p, dados->processo[p].quantAlloc);
+
+	int i;
+	printf("\tQuantidade de recursos alocados: KILL THREAD\n\t");
+	for(i = 0; i < dados->nro_recurso; i ++){
+		printf("%d ", dados->processo[p].quantAlloc[i]);
+	}
+	printf("\n");
+
+	i = libera_recursos(p, dados->processo[p].quantAlloc);
 	dados->processo[p].status = -1;
 }
 

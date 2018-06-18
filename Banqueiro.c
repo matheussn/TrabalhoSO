@@ -110,16 +110,22 @@ int libera_recursos(int pid, int recursos[]){
 
 	int flag = 0;
 	int i;
+	printf("P%d: Recursos Liberados com sucesso\n", pid);
+
+	printf("\tQuantidade de recursos alocados P%d: \n\t", pid);
+	for(i = 0; i < dados->nro_recurso; i ++){
+		printf("%d ", dados->processo[pid].quantAlloc[i]);
+	}
+	printf("\n");
 
 	for(i = 0; i<dados->nro_recurso; i++){
 		dados->disponivel[i] += recursos[i];
 		dados->processo[pid].quantAlloc[i] -= recursos[i];
 	}
-	printf("P%d: Recursos Liberados com sucesso\n", pid);
 
-	printf("\tQuantidade de recursos a liberar: \n\t");
+	printf("\tQuantidade de recursos no sistema após liberar: \n\t");
 	for(i = 0; i < dados->nro_recurso; i ++){
-		printf("%d ", recursos[i]);
+		printf("%d ", dados->disponivel[i]);
 	}
 	printf("\n");
 
