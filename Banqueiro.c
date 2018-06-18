@@ -97,7 +97,7 @@ int requisicao_recursos(int pid, int recursos[]){
 		for(j = 0; j < dados->nro_recurso; j ++){
 			printf("%d ", recursos[j]);
 		}
-		printf("\n\tQuantidade de recursos disponivel no sistema: \n\t");
+		printf("\tQuantidade de recursos disponivel no sistema: \n\t");
 		for(j = 0; j < dados->nro_recurso; j ++){
 			printf("%d ", dados->disponivel[j]);
 		}
@@ -112,13 +112,6 @@ int libera_recursos(int pid, int recursos[]){
 	int flag = 0;
 	int i;
 
-	// for (i = 0 ; i< dados->nro_recurso; i++){
-	// 	if(dados->processo[pid].quantNecess[i] == 0)
-	// 		flag++;
-	// }
-
-	// if(flag == dados->nro_recurso - 1)
-	// {
 	for(i = 0; i<dados->nro_recurso; i++){
 		dados->disponivel[i] += recursos[i];
 		dados->processo[pid].quantAlloc[i] -= recursos[i];
@@ -130,9 +123,6 @@ int libera_recursos(int pid, int recursos[]){
 		printf("%d ", recursos[i]);
 	}
 	printf("\n");
-	// }
-	// else
-	// 	printf("P%d: Processo não finalizado\n", pid);
 
 	return 0;
 

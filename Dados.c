@@ -6,9 +6,6 @@
 
 void need(int p);
 
-
-
-
 int init_Dados(int total[], int nroProcesso, int nroRecurso){
 
 	int i, j;
@@ -71,7 +68,6 @@ int init_Dados(int total[], int nroProcesso, int nroRecurso){
 }
 
 int randomico(int a){
-
 	time_t t;
 	int x;
 

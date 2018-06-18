@@ -8,7 +8,6 @@
 int pid = 0;
 
 int init_Thread(){
-
 	return dados->processo[pid++].pid;
 }
 
@@ -22,7 +21,6 @@ int * rand_req(int p){
 	int i, k;
 
 	int *rec = (int *) malloc(sizeof(int) * dados->nro_recurso);
-
 
 	for(i = 0; i < dados->nro_recurso; i ++){
 		k = dados->processo[p].quantTotal[i] - dados->processo[p].quantAlloc[i];
