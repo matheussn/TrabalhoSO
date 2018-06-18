@@ -81,11 +81,12 @@ void * threadsTest(void * arg){
 		sem_wait(&mutex_res);
 		rec = rand_req(p);
 		if(requisicao_recursos(p,rec) == -1){
-			kill_thread(p);
 			printf("P%d Morreu!\n", p);
+			kill_thread(p);
 			sem_post(&mutex_res);
 			pthread_exit(NULL);
 		}
+		free(rec);
 		sem_post(&mutex_res);
 
 		//Dormir sleep(random() % 3);
@@ -96,6 +97,7 @@ void * threadsTest(void * arg){
 
 		rec = rand_lib(p);
 		libera_recursos(p,rec);
+		free(rec);
 		sem_post(&mutex_res);
 
 		//Dormir sleep(random() % 3);

@@ -118,6 +118,12 @@ int libera_recursos(int pid, int recursos[]){
 	}
 	printf("\n");
 
+	printf("\tQuantidade de recursos para liberar: \n\t");
+	for(i = 0; i < dados->nro_recurso; i ++){
+		printf("%d ", recursos[i]);
+	}
+	printf("\n");
+
 	for(i = 0; i<dados->nro_recurso; i++){
 		dados->disponivel[i] += recursos[i];
 		dados->processo[pid].quantAlloc[i] -= recursos[i];

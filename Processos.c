@@ -12,31 +12,33 @@ int init_Thread(){
 }
 
 void kill_thread(int p){
-
-	int i;
-	printf("\tQuantidade de recursos alocados: KILL THREAD\n\t");
-	for(i = 0; i < dados->nro_recurso; i ++){
-		printf("%d ", dados->processo[p].quantAlloc[i]);
-	}
-	printf("\n");
-
-	i = libera_recursos(p, dados->processo[p].quantAlloc);
+	int flag = 0;
+	int i = libera_recursos(p, dados->processo[p].quantAlloc);
 	dados->processo[p].status = -1;
+	for(i = 0; i < dados->nro_processo; i ++){
+		if(dados->processo[i].status == 0)
+			flag ++;
+	}
+
+	printf("Threads Ativas: %d\n", flag);
+	if(flag <= 1){
+		printf("Finalizando processo...\n");
+		exit(-1);
+	}
 }
 
 int * rand_req(int p){
 	/* 0 <= req <= quantTotal - quantAlloc*/
-	int i, k;
+	int i, k, flag = 0;
 
 	int *rec = (int *) malloc(sizeof(int) * dados->nro_recurso);
 
 	for(i = 0; i < dados->nro_recurso; i ++){
 		k = dados->processo[p].quantTotal[i] - dados->processo[p].quantAlloc[i];
-		if(k != 0)
+		if(k > 1)
 			rec[i] = randomico(k);
 		else
 			rec[i] = k;
-
 		//printf("0 <= %d <= %d - %d\n",rec[i], dados->processo[p].quantTotal[i] , dados->processo[p].quantAlloc[i]);
 	}
 
