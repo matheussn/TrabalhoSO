@@ -101,6 +101,6 @@ void * threadsTest(void * arg){
 		sem_post(&mutex_res);
 
 		//Dormir sleep(random() % 3);
-		sleep(random() % 6=);
+		sleep(random() % 6);
 	}
 }

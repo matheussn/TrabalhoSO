@@ -19,7 +19,7 @@ void kill_thread(int p){
 	int i = libera_recursos(p, dados->processo[p].quantAlloc);
 	dados->processo[p].status = -1;
 	for(i = 0; i < dados->nro_processo; i ++){
-		if(dados->processo[i].status == 0 || dados->processo[i].status == 1) 
+		if(dados->processo[i].status == 0) 
 		{
 			flag2 = i;
 			flag ++;
@@ -85,11 +85,9 @@ void verifica_recursos(int p){
 	if(flag == dados->nro_recurso)
 	{	
 		printf("---------------------------------\n- P%d está pronto para terminar -\n---------------------------------\n", p);
-		dados->processo[p].status = 1;
 		sleep(random() % 20);
 		printf("----------------\n- P%d terminou -\n----------------\n", p);
 		sleep(random() % 10);
-		dados->processo[p].status = 0;
 		printf("---------------------\n- P%d Voltou a vida -\n---------------------\n", p);
 
 	}
