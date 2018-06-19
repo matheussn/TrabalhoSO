@@ -1,6 +1,6 @@
 struct processo {
 	int pid;
-	int status; /* 0=> Vivo -1=> Morto*/
+	int status; /*-1=> Morto  0=> Vivo  1=> finalizando*/
 	int * quantTotal;
 	int * quantAlloc;
 	int * quantNecess;

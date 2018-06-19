@@ -46,7 +46,7 @@ int requisicao_recursos(int pid, int recursos[]){
 			int k=0;
 			for(j = 0; j< dados->nro_recurso; j++)
 			{
-				if (flag[j] >= (dados->processo[i].quantTotal[j] - dados->processo[i].quantAlloc[j]))
+				if (flag[j] >= dados->processo[i].quantNecess[j])
 					k++;
 			}
 
@@ -71,12 +71,13 @@ int requisicao_recursos(int pid, int recursos[]){
 					dados->processo[pid].quantAlloc[j] += recursos[j];
 					printf("%d ", dados->processo[pid].quantAlloc[j]);
 				}
-				printf("\n\tQuantidade de recursos necessarios do processo: \n\t");
+				printf("\n\tQuantidade de recursos necessarios para finalizar do processo: \n\t");
 				for(j = 0; j < dados->nro_recurso; j ++){
 					dados->processo[pid].quantNecess[j] -= recursos[j];
 					printf("%d ", dados->processo[pid].quantNecess[j]);
 				}
 				printf("\n");
+
 				return 0;
 			}
 		}

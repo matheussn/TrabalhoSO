@@ -71,8 +71,8 @@ int randomico(int a){
 	time_t t;
 	int x;
 
-	srand( (unsigned) (a *rand()) +(rand()* time(NULL)));
-	x = (rand() % a ) ;
+	srand( (unsigned) (a *random()) +(random()* time(NULL)));
+	x = (random() % a ) ;
 	return x;
 }
 

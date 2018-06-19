@@ -19,7 +19,7 @@ void kill_thread(int p){
 	int i = libera_recursos(p, dados->processo[p].quantAlloc);
 	dados->processo[p].status = -1;
 	for(i = 0; i < dados->nro_processo; i ++){
-		if(dados->processo[i].status == 0)
+		if(dados->processo[i].status == 0 || dados->processo[i].status == 1) 
 		{
 			flag2 = i;
 			flag ++;
@@ -37,14 +37,14 @@ void kill_thread(int p){
 
 int * rand_req(int p){
 
-	verifica_recursos(p);
+	
 	/* 0 <= req <= quantTotal - quantAlloc*/
 	int i, k, flag = 0;
 
 	int *rec = (int *) malloc(sizeof(int) * dados->nro_recurso);
 
 	for(i = 0; i < dados->nro_recurso; i ++){
-		k = dados->processo[p].quantTotal[i] - dados->processo[p].quantAlloc[i];
+		k = dados->processo[p].quantNecess[i];
 		if(k > 1)
 			rec[i] = randomico(k);
 		else
@@ -83,9 +83,14 @@ void verifica_recursos(int p){
 		}	
 		
 	if(flag == dados->nro_recurso)
-	{
-		printf("P[%d] terminou \n", p);
-		kill_thread(p);
-		pthread_exit(NULL);
+	{	
+		printf("---------------------------------\n- P%d está pronto para terminar -\n---------------------------------\n", p);
+		dados->processo[p].status = 1;
+		sleep(random() % 20);
+		printf("----------------\n- P%d terminou -\n----------------\n", p);
+		sleep(random() % 10);
+		dados->processo[p].status = 0;
+		printf("---------------------\n- P%d Voltou a vida -\n---------------------\n", p);
+
 	}
 }
