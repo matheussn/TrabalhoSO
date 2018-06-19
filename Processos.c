@@ -27,7 +27,8 @@ void kill_thread(int p){
 			
 	}
 
-	printf("Threads Ativas: %d\n", flag);
+	printf("=======================\n= Threads Ativas: %d  =\n=======================\n", flag);
+
 	if(flag <= 1){
 		printf("Finalizando processo...\n");		
 		i = libera_recursos(dados->processo[flag2].pid, dados->processo[flag2].quantAlloc);
