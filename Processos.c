@@ -24,7 +24,7 @@ void kill_thread(int p){
 			flag2 = i;
 			flag ++;
 		}
-			
+		
 	}
 
 	printf("=======================\n= Threads Ativas: %d  =\n=======================\n", flag);
@@ -64,7 +64,7 @@ int * rand_lib(int p){
 
 	for(i = 0; i < dados->nro_recurso; i ++){
 		if(dados->processo[p].quantAlloc[i] != 0)
-			rec[i] = (int) randomico(dados->processo[p].quantAlloc[i]) * dados->porcentagem;
+			rec[i] = randomico(dados->processo[p].quantAlloc[i]);
 		else
 			rec[i] = 0;
 	}
@@ -83,13 +83,13 @@ void verifica_recursos(int p){
 			flag++;
 		}	
 		
-	if(flag == dados->nro_recurso)
-	{	
-		printf("---------------------------------\n- P%d está pronto para terminar -\n---------------------------------\n", p);
-		sleep(random() % 20);
-		printf("----------------\n- P%d terminou -\n----------------\n", p);
-		sleep(random() % 10);
-		printf("---------------------\n- P%d Voltou a vida -\n---------------------\n", p);
+		if(flag == dados->nro_recurso)
+		{	
+			printf("---------------------------------\n- P%d está pronto para terminar -\n---------------------------------\n", p);
+			sleep(random() % 20);
+			printf("----------------\n- P%d terminou -\n----------------\n", p);
+			sleep(random() % 10);
+			printf("---------------------\n- P%d Voltou a vida -\n---------------------\n", p);
 
+		}
 	}
-}
