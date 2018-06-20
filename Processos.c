@@ -64,7 +64,7 @@ int * rand_lib(int p){
 
 	for(i = 0; i < dados->nro_recurso; i ++){
 		if(dados->processo[p].quantAlloc[i] != 0)
-			rec[i] = randomico(dados->processo[p].quantAlloc[i]);
+			rec[i] = (int) randomico(dados->processo[p].quantAlloc[i]) * dados->porcentagem;
 		else
 			rec[i] = 0;
 	}

@@ -3,6 +3,7 @@
 #include <pthread.h>
 #include <semaphore.h>
 #include <unistd.h>
+#include <string.h>
 #include "Dados.h"
 #include "Processos.h"
 #include "Banqueiro.h"
@@ -14,43 +15,60 @@ sem_t mutex_res;
 
 int *avail;
 int nro_processos,nro_recursos;
-
 void * threadsTest(void *);
 
 int main(int argc, char **argv)
 {
 	int i,j;
-	int a;
+    float aux = 1;
 
 	pthread_t *tid;
 
-	if(argc > 5)
+	if(argc > 5  &&  (strcmp(argv[3],"-a") == 0 || (strcmp(argv[3],"-p") == 0 && atof(argv[4]) < 1 && strcmp(argv[5],"-a") == 0) )  && (strcmp(argv[1],"-n") == 0 ))
 	{
-		nro_processos = atoi(argv[2]);
+
+        if(strcmp(argv[3],"-p") == 0 )
+        {
+            aux = atof(argv[4]);
+
+            nro_recursos = argc - 6;
+
+            avail = (int *)malloc(sizeof(int) * (argc - 6));  
+            printf("Quantidade de recurso INICIALMENTE disponível:\n");
+       		for(i = 6, j = 0 ; i < argc; i++ , j++) {
+    			avail[j] = atoi(argv[i]);
+                printf("%i ", avail[j]);
+            }  
+            printf("\n");
+        }
+        else
+        {
+            nro_recursos = argc - 4;
+
+            avail = (int *)malloc(sizeof(int) * (argc - 4));
+            printf("Quantidade de recurso INICIALMENTE disponível:\n");
+      		for(i = 4, j = 0 ; i < argc; i++ , j++) {
+			    avail[j] = atoi(argv[i]);
+		        printf("%i ", avail[j]);
+            }  
+            printf("\n");
+        }
+
+        nro_processos = atoi(argv[2]);
 
 		printf("Numero de Clientes:\t %i \n", nro_processos);
 
-		nro_recursos = argc - 4;
 
 		printf("Numero de recursos:\t %i\n", nro_recursos);
 
-		avail = (int *)malloc(sizeof(int) * (argc - 4));
-
-		printf("Quantidade de recurso INICIALMENTE disponível:\n");
-
-		for(i = 4, j = 0 ; i < argc; i++ , j++) {
-			avail[j] = atoi(argv[i]);
-			printf("%i ", avail[j]);
-		}
 		printf("\n");
 
-		int verifica = init_Dados(avail, nro_processos, nro_recursos);
-
-		if( verifica == 0){
+		int verifica = init_Dados(avail, nro_processos, nro_recursos, aux);
+    	if( verifica == 0){
 			fprintf(stderr," falha na alocação");
 		}
 
-		sem_init(&mutex_init, 0, 1);
+        sem_init(&mutex_init, 0, 1);
 		sem_init(&mutex_res, 0, 1);
 
 		tid = (pthread_t *) malloc(sizeof(pthread_t) * nro_processos);
@@ -63,6 +81,8 @@ int main(int argc, char **argv)
 			pthread_join(tid[i], NULL);
 		}
 	}
+    else
+        fprintf(stderr,"Agumento invalido\n");
 }
 
 void * threadsTest(void * arg){
@@ -90,7 +110,7 @@ void * threadsTest(void * arg){
 		sem_post(&mutex_res);
 		verifica_recursos(p);
 		//Dormir sleep(random() % 3);
-		sleep(random() % 6);
+		sleep(random() % 8);
 
 		//Liberar um subconjunto de recursos alocados
 		sem_wait(&mutex_res);
@@ -101,6 +121,6 @@ void * threadsTest(void * arg){
 		sem_post(&mutex_res);
 
 		//Dormir sleep(random() % 3);
-		sleep(random() % 6);
+		sleep(random() % 8);
 	}
 }

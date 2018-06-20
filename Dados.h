@@ -12,11 +12,13 @@ struct dados {
 	int * total;
 	int nro_processo;
 	int nro_recurso;
+    float porcentagem;
 	Processo * processo;
 };
 typedef struct dados Dados;
 
 Dados * dados;
 
-int init_Dados(int total[], int nroProcesso, int nroRecurso);
+
+int init_Dados(int total[], int nroProcesso, int nroRecurso, float aux);
 int randomico(int a);

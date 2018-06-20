@@ -6,7 +6,7 @@
 
 void need(int p);
 
-int init_Dados(int total[], int nroProcesso, int nroRecurso){
+int init_Dados(int total[], int nroProcesso, int nroRecurso, float aux){
 
 	int i, j;
 	int pid; 
@@ -30,6 +30,8 @@ int init_Dados(int total[], int nroProcesso, int nroRecurso){
 	dados->nro_recurso = nroRecurso;
 
 	dados->nro_processo = nroProcesso;
+
+    dados->porcentagem = aux; 
 
 	for(i = 0; i < nroRecurso; i ++){
 		dados->total[i] = dados->disponivel[i] = total[i];
@@ -57,7 +59,7 @@ int init_Dados(int total[], int nroProcesso, int nroRecurso){
 		printf("P%d: ", pid);
 		for(j = 0; j < nroRecurso; j ++)
 		{
-			dados->processo[pid].quantNecess[j] = dados->processo[pid].quantTotal[j] = randomico(total[j]);
+			dados->processo[pid].quantNecess[j] = dados->processo[pid].quantTotal[j] = (int) randomico(total[j]) * dados->porcentagem ;
 			dados->processo[pid].quantAlloc[j] = 0;
 			printf("%d ", dados->processo[pid].quantTotal[j]);
 		}
@@ -72,8 +74,8 @@ int randomico(int a){
 	int x;
 
 	srand( (unsigned) (a *random()) +(random()* time(NULL)));
-	x = (random() % a ) ;
-	return x;
+	x = (random() % a )  ;
+	return x ;
 }
 
 void need(int p){
