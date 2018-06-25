@@ -3,25 +3,11 @@
 #include <time.h>
 #include "Dados.h"
 
+// Função para requisitar recursos
 int requisicao_recursos(int pid, int recursos[]){
 
 	int i, j;
 	int x;
-	
-
-	/*
-		Verificar se temos recursos para atender a requisição (disp >= rec)
-		se sim
-			Fazer simulação! 
-				criar um vetor simulando que a alocação dos recursos foi realizada, e verificar,
-				se caso, mesmo ainda alocando tais recursos, conseguimos "finalizar" pelo menos um processo?
-				se sim
-					return 0;
-				se não
-					return -1;
-
-		return -1;
-	*/
 
 	/* Verificar se temos recursos para atender a requisição (disp >= rec) */
 	int flag2 = 0;
@@ -43,6 +29,10 @@ int requisicao_recursos(int pid, int recursos[]){
 			if(dados->processo[i].status == -1)
 				continue;
 
+			/* 
+				Verificar se mesmo após a alocação o sistema consegue 
+				terminar uma das outras n threads
+			*/
 			int k=0;
 			for(j = 0; j< dados->nro_recurso; j++)
 			{
@@ -81,39 +71,23 @@ int requisicao_recursos(int pid, int recursos[]){
 				return 0;
 			}
 		}
-
-		printf("P%d: Recurso Não alocado! 1\n", pid);
-		printf("\tQuantidade de recursos requeridos: \n\t");
-		for(j = 0; j < dados->nro_recurso; j ++){
-			printf("%d ", recursos[j]);
-		}
-		printf("\n\tQuantidade de recursos disponivel no sistema: \n\t");
-		for(j = 0; j < dados->nro_recurso; j ++){
-			printf("%d ", dados->disponivel[j]);
-		}
-		printf("\n");
-
-		return -1;
 	}
-	else
-	{
-		printf("P%d: Recurso Não alocado! \n", pid);
-		printf("\tQuantidade de recursos requeridos: \n\t");
-		for(j = 0; j < dados->nro_recurso; j ++){
-			printf("%d ", recursos[j]);
-		}
-		printf("\n\tQuantidade de recursos disponivel no sistema: \n\t");
-		for(j = 0; j < dados->nro_recurso; j ++){
-			printf("%d ", dados->disponivel[j]);
-		}
-		printf("\n");
-		return -1;
+	printf("P%d: Recurso Não alocado! \n", pid);
+	printf("\tQuantidade de recursos requeridos: \n\t");
+	for(j = 0; j < dados->nro_recurso; j ++){
+		printf("%d ", recursos[j]);
 	}
+	printf("\n\tQuantidade de recursos disponivel no sistema: \n\t");
+	for(j = 0; j < dados->nro_recurso; j ++){
+		printf("%d ", dados->disponivel[j]);
+	}
+	printf("\n");
+	return -1;
+
 }
 
+// Função para liberação de recursos
 int libera_recursos(int pid, int recursos[]){
-
-
 	int flag = 0;
 	int i;
 	printf("P%d: Recursos Liberados com sucesso\n", pid);

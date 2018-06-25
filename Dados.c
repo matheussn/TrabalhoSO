@@ -4,8 +4,9 @@
 #include <unistd.h>
 #include "Dados.h"
 
-void need(int p);
-
+/* 
+	Função para inicializar a variavel global dados
+*/
 int init_Dados(int total[], int nroProcesso, int nroRecurso, float aux){
 
 	int i, j;
@@ -69,6 +70,7 @@ int init_Dados(int total[], int nroProcesso, int nroRecurso, float aux){
 
 }
 
+//Função para gerar um valor randomico entre 0 e a
 int randomico(int a){
 	time_t t;
 	int x;
@@ -76,12 +78,4 @@ int randomico(int a){
 	srand( (unsigned) (a *random()) +(random()* time(NULL)));
 	x = (random() % a )  ;
 	return x ;
-}
-
-void need(int p){
-	int i;
-	for(i = 0; i < dados->nro_recurso; i ++){
-		printf("%d ", dados->processo[p].quantTotal[i]);
-	}
-	printf("\n");
 }
