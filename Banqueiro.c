@@ -7,7 +7,6 @@
 int requisicao_recursos(int pid, int recursos[]){
 
 	int i, j;
-	int x;
 
 	/* Verificar se temos recursos para atender a requisição (disp >= rec) */
 	int flag2 = 0;

@@ -15,33 +15,23 @@ sem_t mutex_res;
 
 int *avail;
 int nro_processos,nro_recursos;
-void * threadsTest(void *);
+void * threads(void *);
+void atribuiArgumentos( char **argv,int argc, int n);
 
 int main(int argc, char **argv)
-{
-	int i,j;
+{	
 	float aux = 1;
 
-	pthread_t *tid;
-
+	/*Verifica se os parametros argc e argv estão corretos*/
 	if(argc > 5  &&  ((strcmp(argv[3],"-a") == 0 && strcmp(argv[1],"-n") == 0 ) || strcmp(argv[3],"-p") == 0 ))
 	{
-
+		/*Se houver o argumento -p significa que existe uma porcentagem limitadora*/
 		if(strcmp(argv[3],"-p") == 0 )
 		{
 			aux = atof(argv[4]);
 
 			if(aux <= 1.0 && aux >= 0.1){
-
-				nro_recursos = argc - 6;
-
-				avail = (int *)malloc(sizeof(int) * (argc - 6));  
-				printf("Quantidade de recurso INICIALMENTE disponível:\n");
-				for(i = 6, j = 0 ; i < argc; i++ , j++) {
-					avail[j] = atoi(argv[i]);
-					printf("%i ", avail[j]);
-				}  
-				printf("\n");
+				atribuiArgumentos(argv, argc, 6);				
 			}
 			else{
 				printf("O valor após -p deve ser um ponto flutuante entre 0.1 e 1.0\n");
@@ -50,15 +40,7 @@ int main(int argc, char **argv)
 		}
 		else
 		{
-			nro_recursos = argc - 4;
-
-			avail = (int *)malloc(sizeof(int) * (argc - 4));
-			printf("Quantidade de recurso INICIALMENTE disponível:\n");
-			for(i = 4, j = 0 ; i < argc; i++ , j++) {
-				avail[j] = atoi(argv[i]);
-				printf("%i ", avail[j]);
-			}  
-			printf("\n");
+			atribuiArgumentos(argv, argc, 4);			
 		}
 
 		nro_processos = atoi(argv[2]);
@@ -78,10 +60,12 @@ int main(int argc, char **argv)
 		sem_init(&mutex_init, 0, 1);
 		sem_init(&mutex_res, 0, 1);
 
+		pthread_t *tid;
 		tid = (pthread_t *) malloc(sizeof(pthread_t) * nro_processos);
-
+		
+		int i,j;
 		for(i = 0; i < nro_processos; i ++){
-			pthread_create(&tid[i], NULL,threadsTest, &i);
+			pthread_create(&tid[i], NULL,threads, &i);
 		}
 
 		for(i = 0; i < nro_processos; i ++){
@@ -92,7 +76,24 @@ int main(int argc, char **argv)
 		fprintf(stderr,"Agumento invalido\n");
 }
 
-void * threadsTest(void * arg){
+
+/*Funçao que verifica os argumentos que é passado no momento da execução*/
+void atribuiArgumentos( char **argv,int argc, int n){
+
+	int i,j;
+	nro_recursos = argc - n;
+
+	avail = (int *)malloc(sizeof(int) * nro_recursos);
+	printf("Quantidade de recurso INICIALMENTE disponível:\n");
+	for(i = n, j = 0 ; i < argc; i++ , j++) {
+		avail[j] = atoi(argv[i]);
+		printf("%i ", avail[j]);
+	}  
+	printf("\n");
+}
+
+
+void * threads(void * arg){
 	int  i;
 	int p;
 	int * rec;
@@ -116,7 +117,7 @@ void * threadsTest(void * arg){
 		free(rec);
 		sem_post(&mutex_res);
 		verifica_recursos(p);
-		//Dormir sleep(random() % 3);
+		//Dormir por um tempo randomico;
 		sleep(random() % 8);
 
 		//Liberar um subconjunto de recursos alocados
@@ -127,7 +128,7 @@ void * threadsTest(void * arg){
 		free(rec);
 		sem_post(&mutex_res);
 
-		//Dormir sleep(random() % 3);
+		//Dormir por um tempo randomico;
 		sleep(random() % 8);
 	}
 }

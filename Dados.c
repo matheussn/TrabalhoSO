@@ -58,11 +58,16 @@ int init_Dados(int total[], int nroProcesso, int nroRecurso, float aux){
 
 	for( pid = 0; pid < nroProcesso; pid++){
 		printf("P%d: ", pid);
-		for(j = 0; j < nroRecurso; j ++)
+		for(j = 0; j < nroRecurso; j++)
 		{
 			dados->processo[pid].quantNecess[j] = dados->processo[pid].quantTotal[j] = randomico((int)total[j] * dados->porcentagem );
-			dados->processo[pid].quantAlloc[j] = 0;
-			printf("%d ", dados->processo[pid].quantTotal[j]);
+			if(dados->processo[pid].quantTotal[j] != 0)
+			{
+				dados->processo[pid].quantAlloc[j] = 0;
+				printf("%d ", dados->processo[pid].quantTotal[j]);
+			}
+			else
+				j--;		
 		}
 		printf("\n");
 	}
