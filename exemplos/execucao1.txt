@@ -1,0 +1,141 @@
+Quantidade de recurso INICIALMENTE disponível:
+25 20 30 
+Numero de Clientes:	 5 
+Numero de recursos:	 3
+Quantidade total de recursos de cada processo:
+P0: 8 17 27 
+P1: 19 16 5 
+P2: 23 1 27 
+P3: 9 5 23 
+P4: 17 5 18 
+
+========================
+= Iniciando Simulação! =
+========================
+
+P0: Recurso Não alocado! 
+	Quantidade de recursos requeridos: 
+	6 9 23 
+	Quantidade de recursos disponivel no sistema: 
+	25 20 30 
+P0 Morreu!
+P0: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P0: 
+	0 0 0 
+	Quantidade de recursos para liberar: 
+	0 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	25 20 30 
+=======================
+= Threads Ativas: 4  =
+=======================
+P4: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	5 0 10 
+	Quantidade de recursos disponivel no sistema: 
+	25 20 30 
+	Quantidade de recursos do sistema após a alocação: 
+	20 20 20 
+	Quantidade de recursos do processo após a alocação: 
+	5 0 10 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	12 5 8 
+P2: Recurso Não alocado! 
+	Quantidade de recursos requeridos: 
+	15 1 21 
+	Quantidade de recursos disponivel no sistema: 
+	20 20 20 
+P2 Morreu!
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	0 0 0 
+	Quantidade de recursos para liberar: 
+	0 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	20 20 20 
+=======================
+= Threads Ativas: 3  =
+=======================
+P3: Recurso Não alocado! 
+	Quantidade de recursos requeridos: 
+	8 2 21 
+	Quantidade de recursos disponivel no sistema: 
+	20 20 20 
+P3 Morreu!
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	0 0 0 
+	Quantidade de recursos para liberar: 
+	0 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	20 20 20 
+=======================
+= Threads Ativas: 2  =
+=======================
+P1: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 12 4 
+	Quantidade de recursos disponivel no sistema: 
+	20 20 20 
+	Quantidade de recursos do sistema após a alocação: 
+	20 8 16 
+	Quantidade de recursos do processo após a alocação: 
+	0 12 4 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	19 4 1 
+P1: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P1: 
+	0 12 4 
+	Quantidade de recursos para liberar: 
+	0 10 2 
+	Quantidade de recursos no sistema após liberar: 
+	20 18 18 
+P4: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P4: 
+	5 0 10 
+	Quantidade de recursos para liberar: 
+	3 0 8 
+	Quantidade de recursos no sistema após liberar: 
+	23 18 26 
+P4: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	6 3 2 
+	Quantidade de recursos disponivel no sistema: 
+	23 18 26 
+	Quantidade de recursos do sistema após a alocação: 
+	17 15 24 
+	Quantidade de recursos do processo após a alocação: 
+	8 3 4 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	9 2 14 
+P4: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P4: 
+	8 3 4 
+	Quantidade de recursos para liberar: 
+	0 0 3 
+	Quantidade de recursos no sistema após liberar: 
+	17 15 27 
+P1: Recurso Não alocado! 
+	Quantidade de recursos requeridos: 
+	11 0 1 
+	Quantidade de recursos disponivel no sistema: 
+	17 15 27 
+P1 Morreu!
+P1: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P1: 
+	0 2 2 
+	Quantidade de recursos para liberar: 
+	0 2 2 
+	Quantidade de recursos no sistema após liberar: 
+	17 17 29 
+=======================
+= Threads Ativas: 1  =
+=======================
+Finalizando processo...
+P4: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P4: 
+	8 3 1 
+	Quantidade de recursos para liberar: 
+	8 3 1 
+	Quantidade de recursos no sistema após liberar: 
+	25 20 30 

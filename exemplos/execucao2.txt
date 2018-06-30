@@ -1,0 +1,2575 @@
+Quantidade de recurso INICIALMENTE disponível:
+25 20 30 
+Numero de Clientes:	 5 
+Numero de recursos:	 3
+Quantidade total de recursos de cada processo:
+P0: 3 8 3 
+P1: 16 13 13 
+P2: 3 6 2 
+P3: 5 10 18 
+P4: 11 6 2 
+========================
+= Iniciando Simulação! =
+========================
+P0: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 5 0 
+	Quantidade de recursos disponivel no sistema: 
+	25 20 30 
+	Quantidade de recursos do sistema após a alocação: 
+	25 15 30 
+	Quantidade de recursos do processo após a alocação: 
+	0 5 0 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	3 3 3 
+P1: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	5 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	25 15 30 
+	Quantidade de recursos do sistema após a alocação: 
+	20 15 30 
+	Quantidade de recursos do processo após a alocação: 
+	5 0 0 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	11 13 13 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	2 0 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 15 30 
+	Quantidade de recursos do sistema após a alocação: 
+	18 15 29 
+	Quantidade de recursos do processo após a alocação: 
+	2 0 1 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 6 1 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 7 3 
+	Quantidade de recursos disponivel no sistema: 
+	18 15 29 
+	Quantidade de recursos do sistema após a alocação: 
+	17 8 26 
+	Quantidade de recursos do processo após a alocação: 
+	1 7 3 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	4 3 15 
+P4: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	6 4 1 
+	Quantidade de recursos disponivel no sistema: 
+	17 8 26 
+	Quantidade de recursos do sistema após a alocação: 
+	11 4 25 
+	Quantidade de recursos do processo após a alocação: 
+	6 4 1 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	5 2 1 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	1 7 3 
+	Quantidade de recursos para liberar: 
+	0 6 0 
+	Quantidade de recursos no sistema após liberar: 
+	11 10 25 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 5 2 
+	Quantidade de recursos disponivel no sistema: 
+	11 10 25 
+	Quantidade de recursos do sistema após a alocação: 
+	10 5 23 
+	Quantidade de recursos do processo após a alocação: 
+	2 6 5 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	3 4 13 
+P0: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P0: 
+	0 5 0 
+	Quantidade de recursos para liberar: 
+	0 3 0 
+	Quantidade de recursos no sistema após liberar: 
+	10 8 23 
+P1: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P1: 
+	5 0 0 
+	Quantidade de recursos para liberar: 
+	2 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	12 8 23 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	2 0 1 
+	Quantidade de recursos para liberar: 
+	0 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	12 8 23 
+P0: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	2 5 0 
+	Quantidade de recursos disponivel no sistema: 
+	12 8 23 
+	Quantidade de recursos do sistema após a alocação: 
+	10 3 23 
+	Quantidade de recursos do processo após a alocação: 
+	2 7 0 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 1 3 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 1 
+	Quantidade de recursos disponivel no sistema: 
+	10 3 23 
+	Quantidade de recursos do sistema após a alocação: 
+	9 3 22 
+	Quantidade de recursos do processo após a alocação: 
+	3 0 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 6 0 
+P4: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P4: 
+	6 4 1 
+	Quantidade de recursos para liberar: 
+	0 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	9 3 22 
+P1: Recurso Não alocado! 
+	Quantidade de recursos requeridos: 
+	10 10 6 
+	Quantidade de recursos disponivel no sistema: 
+	9 3 22 
+P1 Morreu!
+P1: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P1: 
+	3 0 0 
+	Quantidade de recursos para liberar: 
+	3 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	12 3 22 
+=======================
+= Threads Ativas: 4  =
+=======================
+P0: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P0: 
+	2 7 0 
+	Quantidade de recursos para liberar: 
+	0 6 0 
+	Quantidade de recursos no sistema após liberar: 
+	12 9 22 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 0 2 
+	Quantidade de recursos para liberar: 
+	0 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	12 9 22 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	2 6 5 
+	Quantidade de recursos para liberar: 
+	1 4 1 
+	Quantidade de recursos no sistema após liberar: 
+	13 13 23 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	3 6 2 
+	Quantidade de recursos disponivel no sistema: 
+	13 13 23 
+	Quantidade de recursos do sistema após a alocação: 
+	10 7 21 
+	Quantidade de recursos do processo após a alocação: 
+	4 8 6 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 2 12 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 0 
+	Quantidade de recursos disponivel no sistema: 
+	10 7 21 
+	Quantidade de recursos do sistema após a alocação: 
+	10 6 21 
+	Quantidade de recursos do processo após a alocação: 
+	3 1 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 5 0 
+P0: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 0 
+	Quantidade de recursos disponivel no sistema: 
+	10 6 21 
+	Quantidade de recursos do sistema após a alocação: 
+	9 4 21 
+	Quantidade de recursos do processo após a alocação: 
+	3 3 0 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 5 3 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 1 2 
+	Quantidade de recursos para liberar: 
+	0 0 1 
+	Quantidade de recursos no sistema após liberar: 
+	9 4 22 
+P4: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	9 4 22 
+	Quantidade de recursos do sistema após a alocação: 
+	8 3 21 
+	Quantidade de recursos do processo após a alocação: 
+	7 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	4 1 0 
+P4: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P4: 
+	7 5 2 
+	Quantidade de recursos para liberar: 
+	5 2 1 
+	Quantidade de recursos no sistema após liberar: 
+	13 5 22 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	4 8 6 
+	Quantidade de recursos para liberar: 
+	0 0 4 
+	Quantidade de recursos no sistema após liberar: 
+	13 5 26 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	13 5 26 
+	Quantidade de recursos do sistema após a alocação: 
+	13 4 25 
+	Quantidade de recursos do processo após a alocação: 
+	3 2 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 4 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 2 2 
+	Quantidade de recursos para liberar: 
+	0 0 1 
+	Quantidade de recursos no sistema após liberar: 
+	13 4 26 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 2 1 
+	Quantidade de recursos disponivel no sistema: 
+	13 4 26 
+	Quantidade de recursos do sistema após a alocação: 
+	13 2 25 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 2 0 
+P4: Recurso Não alocado! 
+	Quantidade de recursos requeridos: 
+	2 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	13 2 25 
+P4 Morreu!
+P4: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P4: 
+	2 3 1 
+	Quantidade de recursos para liberar: 
+	2 3 1 
+	Quantidade de recursos no sistema após liberar: 
+	15 5 26 
+=======================
+= Threads Ativas: 3  =
+=======================
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 12 
+	Quantidade de recursos disponivel no sistema: 
+	15 5 26 
+	Quantidade de recursos do sistema após a alocação: 
+	14 5 14 
+	Quantidade de recursos do processo após a alocação: 
+	5 8 14 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 2 4 
+P0: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P0: 
+	3 3 0 
+	Quantidade de recursos para liberar: 
+	2 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	16 5 14 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 4 2 
+	Quantidade de recursos para liberar: 
+	1 2 0 
+	Quantidade de recursos no sistema após liberar: 
+	17 7 14 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	5 8 14 
+	Quantidade de recursos para liberar: 
+	3 5 5 
+	Quantidade de recursos no sistema após liberar: 
+	20 12 19 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	20 12 19 
+	Quantidade de recursos do sistema após a alocação: 
+	19 12 19 
+	Quantidade de recursos do processo após a alocação: 
+	3 2 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 4 0 
+P0: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 3 0 
+	Quantidade de recursos disponivel no sistema: 
+	19 12 19 
+	Quantidade de recursos do sistema após a alocação: 
+	19 9 19 
+	Quantidade de recursos do processo após a alocação: 
+	1 6 0 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 2 3 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 2 2 
+	Quantidade de recursos para liberar: 
+	0 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	19 9 19 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 3 
+	Quantidade de recursos disponivel no sistema: 
+	19 9 19 
+	Quantidade de recursos do sistema após a alocação: 
+	18 7 16 
+	Quantidade de recursos do processo após a alocação: 
+	3 5 12 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 5 6 
+P0: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P0: 
+	1 6 0 
+	Quantidade de recursos para liberar: 
+	0 2 0 
+	Quantidade de recursos no sistema após liberar: 
+	18 9 16 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 5 12 
+	Quantidade de recursos para liberar: 
+	2 4 0 
+	Quantidade de recursos no sistema após liberar: 
+	20 13 16 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 2 3 
+	Quantidade de recursos disponivel no sistema: 
+	20 13 16 
+	Quantidade de recursos do sistema após a alocação: 
+	20 11 13 
+	Quantidade de recursos do processo após a alocação: 
+	1 3 15 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	4 7 3 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 2 0 
+	Quantidade de recursos disponivel no sistema: 
+	20 11 13 
+	Quantidade de recursos do sistema após a alocação: 
+	20 9 13 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 2 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	1 3 15 
+	Quantidade de recursos para liberar: 
+	0 0 12 
+	Quantidade de recursos no sistema após liberar: 
+	20 9 25 
+P0: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 3 2 
+	Quantidade de recursos disponivel no sistema: 
+	20 9 25 
+	Quantidade de recursos do sistema após a alocação: 
+	19 6 23 
+	Quantidade de recursos do processo após a alocação: 
+	2 7 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 1 1 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 4 2 
+	Quantidade de recursos para liberar: 
+	2 1 0 
+	Quantidade de recursos no sistema após liberar: 
+	21 7 23 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	3 5 12 
+	Quantidade de recursos disponivel no sistema: 
+	21 7 23 
+	Quantidade de recursos do sistema após a alocação: 
+	18 2 11 
+	Quantidade de recursos do processo após a alocação: 
+	4 8 15 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 2 3 
+P0: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P0: 
+	2 7 2 
+	Quantidade de recursos para liberar: 
+	0 2 0 
+	Quantidade de recursos no sistema após liberar: 
+	18 4 11 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 0 
+	Quantidade de recursos disponivel no sistema: 
+	18 4 11 
+	Quantidade de recursos do sistema após a alocação: 
+	18 3 11 
+	Quantidade de recursos do processo após a alocação: 
+	1 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 2 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	1 4 2 
+	Quantidade de recursos para liberar: 
+	0 3 1 
+	Quantidade de recursos no sistema após liberar: 
+	18 6 12 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	4 8 15 
+	Quantidade de recursos para liberar: 
+	3 3 7 
+	Quantidade de recursos no sistema após liberar: 
+	21 9 19 
+P0: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 1 
+	Quantidade de recursos disponivel no sistema: 
+	21 9 19 
+	Quantidade de recursos do sistema após a alocação: 
+	20 7 18 
+	Quantidade de recursos do processo após a alocação: 
+	3 7 3 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 0 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 4 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 7 18 
+	Quantidade de recursos do sistema após a alocação: 
+	19 3 17 
+	Quantidade de recursos do processo após a alocação: 
+	2 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 1 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	2 5 2 
+	Quantidade de recursos para liberar: 
+	0 2 1 
+	Quantidade de recursos no sistema após liberar: 
+	19 5 18 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 5 
+	Quantidade de recursos disponivel no sistema: 
+	19 5 18 
+	Quantidade de recursos do sistema após a alocação: 
+	19 4 13 
+	Quantidade de recursos do processo após a alocação: 
+	1 6 13 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	4 4 5 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	19 4 13 
+	Quantidade de recursos do sistema após a alocação: 
+	18 3 12 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 2 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	1 6 13 
+	Quantidade de recursos para liberar: 
+	0 5 12 
+	Quantidade de recursos no sistema após liberar: 
+	18 8 24 
+P0: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P0: 
+	3 7 3 
+	Quantidade de recursos para liberar: 
+	0 3 0 
+	Quantidade de recursos no sistema após liberar: 
+	18 11 24 
+P0: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 3 0 
+	Quantidade de recursos disponivel no sistema: 
+	18 11 24 
+	Quantidade de recursos do sistema após a alocação: 
+	18 8 24 
+	Quantidade de recursos do processo após a alocação: 
+	3 7 3 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 0 
+P0: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P0: 
+	3 7 3 
+	Quantidade de recursos para liberar: 
+	0 6 0 
+	Quantidade de recursos no sistema após liberar: 
+	18 14 24 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 4 2 
+	Quantidade de recursos para liberar: 
+	0 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	18 14 24 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	2 7 6 
+	Quantidade de recursos disponivel no sistema: 
+	18 14 24 
+	Quantidade de recursos do sistema após a alocação: 
+	16 7 18 
+	Quantidade de recursos do processo após a alocação: 
+	3 8 7 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 2 11 
+P0: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 3 0 
+	Quantidade de recursos disponivel no sistema: 
+	16 7 18 
+	Quantidade de recursos do sistema após a alocação: 
+	16 4 18 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 3 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 4 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 8 7 
+	Quantidade de recursos para liberar: 
+	0 1 4 
+	Quantidade de recursos no sistema após liberar: 
+	16 5 22 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	16 5 22 
+	Quantidade de recursos do sistema após a alocação: 
+	16 5 22 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 2 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 4 2 
+	Quantidade de recursos para liberar: 
+	0 1 0 
+	Quantidade de recursos no sistema após liberar: 
+	16 6 22 
+P0: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P0: 
+	3 4 3 
+	Quantidade de recursos para liberar: 
+	0 0 2 
+	Quantidade de recursos no sistema após liberar: 
+	16 6 24 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 1 0 
+	Quantidade de recursos disponivel no sistema: 
+	16 6 24 
+	Quantidade de recursos do sistema após a alocação: 
+	15 5 24 
+	Quantidade de recursos do processo após a alocação: 
+	4 8 3 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 2 15 
+P0: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 3 1 
+	Quantidade de recursos disponivel no sistema: 
+	15 5 24 
+	Quantidade de recursos do sistema após a alocação: 
+	15 2 23 
+	Quantidade de recursos do processo após a alocação: 
+	3 7 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 1 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	15 2 23 
+	Quantidade de recursos do sistema após a alocação: 
+	15 2 23 
+	Quantidade de recursos do processo após a alocação: 
+	3 3 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 3 0 
+P0: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P0: 
+	3 7 2 
+	Quantidade de recursos para liberar: 
+	0 5 0 
+	Quantidade de recursos no sistema após liberar: 
+	15 7 23 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	4 8 3 
+	Quantidade de recursos para liberar: 
+	2 5 2 
+	Quantidade de recursos no sistema após liberar: 
+	17 12 25 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	2 6 14 
+	Quantidade de recursos disponivel no sistema: 
+	17 12 25 
+	Quantidade de recursos do sistema após a alocação: 
+	15 6 11 
+	Quantidade de recursos do processo após a alocação: 
+	4 9 15 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 1 3 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 3 2 
+	Quantidade de recursos para liberar: 
+	0 2 0 
+	Quantidade de recursos no sistema após liberar: 
+	15 8 11 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	4 9 15 
+	Quantidade de recursos para liberar: 
+	0 5 0 
+	Quantidade de recursos no sistema após liberar: 
+	15 13 11 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 3 1 
+	Quantidade de recursos disponivel no sistema: 
+	15 13 11 
+	Quantidade de recursos do sistema após a alocação: 
+	14 10 10 
+	Quantidade de recursos do processo após a alocação: 
+	5 7 16 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 3 2 
+P0: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 4 1 
+	Quantidade de recursos disponivel no sistema: 
+	14 10 10 
+	Quantidade de recursos do sistema após a alocação: 
+	14 6 9 
+	Quantidade de recursos do processo após a alocação: 
+	3 6 3 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 2 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	5 7 16 
+	Quantidade de recursos para liberar: 
+	2 2 12 
+	Quantidade de recursos no sistema após liberar: 
+	16 8 21 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 0 
+	Quantidade de recursos disponivel no sistema: 
+	16 8 21 
+	Quantidade de recursos do sistema após a alocação: 
+	16 7 21 
+	Quantidade de recursos do processo após a alocação: 
+	3 2 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 4 0 
+P0: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P0: 
+	3 6 3 
+	Quantidade de recursos para liberar: 
+	2 5 0 
+	Quantidade de recursos no sistema após liberar: 
+	18 12 21 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 4 4 
+	Quantidade de recursos disponivel no sistema: 
+	18 12 21 
+	Quantidade de recursos do sistema após a alocação: 
+	18 8 17 
+	Quantidade de recursos do processo após a alocação: 
+	3 9 8 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 1 10 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 2 2 
+	Quantidade de recursos para liberar: 
+	2 1 1 
+	Quantidade de recursos no sistema após liberar: 
+	20 9 18 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 9 18 
+	Quantidade de recursos do sistema após a alocação: 
+	19 7 17 
+	Quantidade de recursos do processo após a alocação: 
+	2 3 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 3 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	2 3 2 
+	Quantidade de recursos para liberar: 
+	0 2 0 
+	Quantidade de recursos no sistema após liberar: 
+	19 9 17 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 4 0 
+	Quantidade de recursos disponivel no sistema: 
+	19 9 17 
+	Quantidade de recursos do sistema após a alocação: 
+	18 5 17 
+	Quantidade de recursos do processo após a alocação: 
+	3 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 9 8 
+	Quantidade de recursos para liberar: 
+	1 6 5 
+	Quantidade de recursos no sistema após liberar: 
+	19 11 22 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 6 2 
+	Quantidade de recursos disponivel no sistema: 
+	19 11 22 
+	Quantidade de recursos do sistema após a alocação: 
+	19 5 20 
+	Quantidade de recursos do processo após a alocação: 
+	2 9 5 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	3 1 13 
+P0: Recurso Não alocado! 
+	Quantidade de recursos requeridos: 
+	1 5 0 
+	Quantidade de recursos disponivel no sistema: 
+	19 5 20 
+P0 Morreu!
+P0: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P0: 
+	1 1 3 
+	Quantidade de recursos para liberar: 
+	1 1 3 
+	Quantidade de recursos no sistema após liberar: 
+	20 6 23 
+=======================
+= Threads Ativas: 2  =
+=======================
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 5 2 
+	Quantidade de recursos para liberar: 
+	1 2 0 
+	Quantidade de recursos no sistema após liberar: 
+	21 8 23 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 1 0 
+	Quantidade de recursos disponivel no sistema: 
+	21 8 23 
+	Quantidade de recursos do sistema após a alocação: 
+	20 7 23 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 2 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	2 9 5 
+	Quantidade de recursos para liberar: 
+	1 7 4 
+	Quantidade de recursos no sistema após liberar: 
+	21 14 27 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 4 2 
+	Quantidade de recursos para liberar: 
+	1 2 0 
+	Quantidade de recursos no sistema após liberar: 
+	22 16 27 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 4 0 
+	Quantidade de recursos disponivel no sistema: 
+	22 16 27 
+	Quantidade de recursos do sistema após a alocação: 
+	21 12 27 
+	Quantidade de recursos do processo após a alocação: 
+	2 6 1 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	3 4 17 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	2 6 1 
+	Quantidade de recursos para liberar: 
+	1 4 0 
+	Quantidade de recursos no sistema após liberar: 
+	22 16 27 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	2 1 5 
+	Quantidade de recursos disponivel no sistema: 
+	22 16 27 
+	Quantidade de recursos do sistema após a alocação: 
+	20 15 22 
+	Quantidade de recursos do processo após a alocação: 
+	3 3 6 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 7 12 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 0 
+	Quantidade de recursos disponivel no sistema: 
+	20 15 22 
+	Quantidade de recursos do sistema após a alocação: 
+	19 13 22 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 2 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 3 6 
+	Quantidade de recursos para liberar: 
+	0 2 2 
+	Quantidade de recursos no sistema após liberar: 
+	19 15 24 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 4 2 
+	Quantidade de recursos para liberar: 
+	0 2 1 
+	Quantidade de recursos no sistema após liberar: 
+	19 17 25 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 4 
+	Quantidade de recursos disponivel no sistema: 
+	19 17 25 
+	Quantidade de recursos do sistema após a alocação: 
+	18 17 21 
+	Quantidade de recursos do processo após a alocação: 
+	4 1 8 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 9 10 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 2 1 
+	Quantidade de recursos disponivel no sistema: 
+	18 17 21 
+	Quantidade de recursos do sistema após a alocação: 
+	18 15 20 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 2 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	4 1 8 
+	Quantidade de recursos para liberar: 
+	0 0 6 
+	Quantidade de recursos no sistema após liberar: 
+	18 15 26 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 4 
+	Quantidade de recursos disponivel no sistema: 
+	18 15 26 
+	Quantidade de recursos do sistema após a alocação: 
+	17 15 22 
+	Quantidade de recursos do processo após a alocação: 
+	5 1 6 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 9 12 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 4 2 
+	Quantidade de recursos para liberar: 
+	0 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	17 15 22 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 0 
+	Quantidade de recursos disponivel no sistema: 
+	17 15 22 
+	Quantidade de recursos do sistema após a alocação: 
+	17 14 22 
+	Quantidade de recursos do processo após a alocação: 
+	3 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	5 1 6 
+	Quantidade de recursos para liberar: 
+	3 0 3 
+	Quantidade de recursos no sistema após liberar: 
+	20 14 25 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 7 
+	Quantidade de recursos disponivel no sistema: 
+	20 14 25 
+	Quantidade de recursos do sistema após a alocação: 
+	19 12 18 
+	Quantidade de recursos do processo após a alocação: 
+	3 3 10 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 7 8 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 5 2 
+	Quantidade de recursos para liberar: 
+	0 2 1 
+	Quantidade de recursos no sistema após liberar: 
+	19 14 19 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 3 10 
+	Quantidade de recursos para liberar: 
+	0 1 6 
+	Quantidade de recursos no sistema após liberar: 
+	19 15 25 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 0 1 
+	Quantidade de recursos disponivel no sistema: 
+	19 15 25 
+	Quantidade de recursos do sistema após a alocação: 
+	19 15 24 
+	Quantidade de recursos do processo após a alocação: 
+	3 3 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 3 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 4 1 
+	Quantidade de recursos disponivel no sistema: 
+	19 15 24 
+	Quantidade de recursos do sistema após a alocação: 
+	18 11 23 
+	Quantidade de recursos do processo após a alocação: 
+	4 6 5 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 4 13 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	4 6 5 
+	Quantidade de recursos para liberar: 
+	2 1 3 
+	Quantidade de recursos no sistema após liberar: 
+	20 12 26 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 3 2 
+	Quantidade de recursos para liberar: 
+	1 1 1 
+	Quantidade de recursos no sistema após liberar: 
+	21 13 27 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	21 13 27 
+	Quantidade de recursos do sistema após a alocação: 
+	20 12 26 
+	Quantidade de recursos do processo após a alocação: 
+	3 3 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 3 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 3 2 
+	Quantidade de recursos para liberar: 
+	1 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	21 12 26 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	21 12 26 
+	Quantidade de recursos do sistema após a alocação: 
+	20 12 26 
+	Quantidade de recursos do processo após a alocação: 
+	3 3 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 3 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 2 13 
+	Quantidade de recursos disponivel no sistema: 
+	20 12 26 
+	Quantidade de recursos do sistema após a alocação: 
+	20 10 13 
+	Quantidade de recursos do processo após a alocação: 
+	2 7 15 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	3 3 3 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 3 2 
+	Quantidade de recursos para liberar: 
+	2 2 0 
+	Quantidade de recursos no sistema após liberar: 
+	22 12 13 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	22 12 13 
+	Quantidade de recursos do sistema após a alocação: 
+	22 12 13 
+	Quantidade de recursos do processo após a alocação: 
+	1 1 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 5 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	2 7 15 
+	Quantidade de recursos para liberar: 
+	1 2 4 
+	Quantidade de recursos no sistema após liberar: 
+	23 14 17 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	1 1 2 
+	Quantidade de recursos para liberar: 
+	0 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	23 14 17 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	2 3 5 
+	Quantidade de recursos disponivel no sistema: 
+	23 14 17 
+	Quantidade de recursos do sistema após a alocação: 
+	21 11 12 
+	Quantidade de recursos do processo após a alocação: 
+	3 8 16 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 2 2 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 8 16 
+	Quantidade de recursos para liberar: 
+	2 5 8 
+	Quantidade de recursos no sistema após liberar: 
+	23 16 20 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 1 0 
+	Quantidade de recursos disponivel no sistema: 
+	23 16 20 
+	Quantidade de recursos do sistema após a alocação: 
+	22 15 20 
+	Quantidade de recursos do processo após a alocação: 
+	2 2 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 4 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 5 2 
+	Quantidade de recursos disponivel no sistema: 
+	22 15 20 
+	Quantidade de recursos do sistema após a alocação: 
+	22 10 18 
+	Quantidade de recursos do processo após a alocação: 
+	1 8 10 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	4 2 8 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	2 2 2 
+	Quantidade de recursos para liberar: 
+	0 0 1 
+	Quantidade de recursos no sistema após liberar: 
+	22 10 19 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	1 8 10 
+	Quantidade de recursos para liberar: 
+	0 4 9 
+	Quantidade de recursos no sistema após liberar: 
+	22 14 28 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	2 4 9 
+	Quantidade de recursos disponivel no sistema: 
+	22 14 28 
+	Quantidade de recursos do sistema após a alocação: 
+	20 10 19 
+	Quantidade de recursos do processo após a alocação: 
+	3 8 10 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 2 8 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 10 19 
+	Quantidade de recursos do sistema após a alocação: 
+	19 8 18 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 2 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 8 10 
+	Quantidade de recursos para liberar: 
+	1 1 7 
+	Quantidade de recursos no sistema após liberar: 
+	20 9 25 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 4 2 
+	Quantidade de recursos para liberar: 
+	0 0 1 
+	Quantidade de recursos no sistema após liberar: 
+	20 9 26 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 9 26 
+	Quantidade de recursos do sistema após a alocação: 
+	20 8 25 
+	Quantidade de recursos do processo após a alocação: 
+	3 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 8 25 
+	Quantidade de recursos do sistema após a alocação: 
+	19 7 24 
+	Quantidade de recursos do processo após a alocação: 
+	3 8 4 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 2 14 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 5 2 
+	Quantidade de recursos para liberar: 
+	1 2 0 
+	Quantidade de recursos no sistema após liberar: 
+	20 9 24 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 8 4 
+	Quantidade de recursos para liberar: 
+	1 2 1 
+	Quantidade de recursos no sistema após liberar: 
+	21 11 25 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 1 0 
+	Quantidade de recursos disponivel no sistema: 
+	21 11 25 
+	Quantidade de recursos do sistema após a alocação: 
+	20 10 25 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 2 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 3 11 
+	Quantidade de recursos disponivel no sistema: 
+	20 10 25 
+	Quantidade de recursos do sistema após a alocação: 
+	19 7 14 
+	Quantidade de recursos do processo após a alocação: 
+	3 9 14 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 1 4 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 9 14 
+	Quantidade de recursos para liberar: 
+	1 5 1 
+	Quantidade de recursos no sistema após liberar: 
+	20 12 15 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 4 4 
+	Quantidade de recursos disponivel no sistema: 
+	20 12 15 
+	Quantidade de recursos do sistema após a alocação: 
+	19 8 11 
+	Quantidade de recursos do processo após a alocação: 
+	3 8 17 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 2 1 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 8 17 
+	Quantidade de recursos para liberar: 
+	2 0 6 
+	Quantidade de recursos no sistema após liberar: 
+	21 8 17 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 4 2 
+	Quantidade de recursos para liberar: 
+	1 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	22 8 17 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 1 0 
+	Quantidade de recursos disponivel no sistema: 
+	22 8 17 
+	Quantidade de recursos do sistema após a alocação: 
+	21 7 17 
+	Quantidade de recursos do processo após a alocação: 
+	3 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	2 1 2 
+	Quantidade de recursos disponivel no sistema: 
+	21 7 17 
+	Quantidade de recursos do sistema após a alocação: 
+	19 6 15 
+	Quantidade de recursos do processo após a alocação: 
+	3 9 13 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 1 5 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 9 13 
+	Quantidade de recursos para liberar: 
+	0 0 2 
+	Quantidade de recursos no sistema após liberar: 
+	19 6 17 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 5 2 
+	Quantidade de recursos para liberar: 
+	1 1 0 
+	Quantidade de recursos no sistema após liberar: 
+	20 7 17 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 4 
+	Quantidade de recursos disponivel no sistema: 
+	20 7 17 
+	Quantidade de recursos do sistema após a alocação: 
+	20 6 13 
+	Quantidade de recursos do processo após a alocação: 
+	3 10 15 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 0 3 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 1 0 
+	Quantidade de recursos disponivel no sistema: 
+	20 6 13 
+	Quantidade de recursos do sistema após a alocação: 
+	19 5 13 
+	Quantidade de recursos do processo após a alocação: 
+	3 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 10 15 
+	Quantidade de recursos para liberar: 
+	1 4 13 
+	Quantidade de recursos no sistema após liberar: 
+	20 9 26 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 5 2 
+	Quantidade de recursos para liberar: 
+	0 4 1 
+	Quantidade de recursos no sistema após liberar: 
+	20 13 27 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 13 27 
+	Quantidade de recursos do sistema após a alocação: 
+	20 12 26 
+	Quantidade de recursos do processo após a alocação: 
+	3 2 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 4 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 3 2 
+	Quantidade de recursos disponivel no sistema: 
+	20 12 26 
+	Quantidade de recursos do sistema após a alocação: 
+	19 9 24 
+	Quantidade de recursos do processo após a alocação: 
+	3 9 4 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 1 14 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 2 2 
+	Quantidade de recursos para liberar: 
+	1 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	20 9 24 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 9 4 
+	Quantidade de recursos para liberar: 
+	0 7 3 
+	Quantidade de recursos no sistema após liberar: 
+	20 16 27 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	20 16 27 
+	Quantidade de recursos do sistema após a alocação: 
+	19 16 27 
+	Quantidade de recursos do processo após a alocação: 
+	3 2 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 4 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 2 2 
+	Quantidade de recursos para liberar: 
+	0 0 1 
+	Quantidade de recursos no sistema após liberar: 
+	19 16 28 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 3 1 
+	Quantidade de recursos disponivel no sistema: 
+	19 16 28 
+	Quantidade de recursos do sistema após a alocação: 
+	19 13 27 
+	Quantidade de recursos do processo após a alocação: 
+	3 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 5 16 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	19 13 27 
+	Quantidade de recursos do sistema após a alocação: 
+	19 12 26 
+	Quantidade de recursos do processo após a alocação: 
+	3 3 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 3 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 5 2 
+	Quantidade de recursos para liberar: 
+	0 1 1 
+	Quantidade de recursos no sistema após liberar: 
+	19 13 27 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 0 8 
+	Quantidade de recursos disponivel no sistema: 
+	19 13 27 
+	Quantidade de recursos do sistema após a alocação: 
+	19 13 19 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 9 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 6 9 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 3 2 
+	Quantidade de recursos para liberar: 
+	0 2 0 
+	Quantidade de recursos no sistema após liberar: 
+	19 15 19 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 4 9 
+	Quantidade de recursos para liberar: 
+	0 2 5 
+	Quantidade de recursos no sistema após liberar: 
+	19 17 24 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	19 17 24 
+	Quantidade de recursos do sistema após a alocação: 
+	19 17 24 
+	Quantidade de recursos do processo após a alocação: 
+	3 1 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 5 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 5 2 
+	Quantidade de recursos disponivel no sistema: 
+	19 17 24 
+	Quantidade de recursos do sistema após a alocação: 
+	19 12 22 
+	Quantidade de recursos do processo após a alocação: 
+	3 7 6 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 3 12 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 1 2 
+	Quantidade de recursos para liberar: 
+	0 0 1 
+	Quantidade de recursos no sistema após liberar: 
+	19 12 23 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 7 6 
+	Quantidade de recursos para liberar: 
+	1 6 3 
+	Quantidade de recursos no sistema após liberar: 
+	20 18 26 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 8 5 
+	Quantidade de recursos disponivel no sistema: 
+	20 18 26 
+	Quantidade de recursos do sistema após a alocação: 
+	20 10 21 
+	Quantidade de recursos do processo após a alocação: 
+	2 9 8 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	3 1 10 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 2 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 10 21 
+	Quantidade de recursos do sistema após a alocação: 
+	20 8 20 
+	Quantidade de recursos do processo após a alocação: 
+	3 3 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 3 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 3 2 
+	Quantidade de recursos para liberar: 
+	0 1 0 
+	Quantidade de recursos no sistema após liberar: 
+	20 9 20 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	2 9 8 
+	Quantidade de recursos para liberar: 
+	1 3 1 
+	Quantidade de recursos no sistema após liberar: 
+	21 12 21 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 2 0 
+	Quantidade de recursos disponivel no sistema: 
+	21 12 21 
+	Quantidade de recursos do sistema após a alocação: 
+	21 10 21 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 2 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 4 2 
+	Quantidade de recursos para liberar: 
+	0 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	21 10 21 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	2 2 10 
+	Quantidade de recursos disponivel no sistema: 
+	21 10 21 
+	Quantidade de recursos do sistema após a alocação: 
+	19 8 11 
+	Quantidade de recursos do processo após a alocação: 
+	3 8 17 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 2 1 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 8 17 
+	Quantidade de recursos para liberar: 
+	2 5 11 
+	Quantidade de recursos no sistema após liberar: 
+	21 13 22 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	21 13 22 
+	Quantidade de recursos do sistema após a alocação: 
+	21 13 22 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 2 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 4 2 
+	Quantidade de recursos para liberar: 
+	1 0 1 
+	Quantidade de recursos no sistema após liberar: 
+	22 13 23 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 9 
+	Quantidade de recursos disponivel no sistema: 
+	22 13 23 
+	Quantidade de recursos do sistema após a alocação: 
+	21 13 14 
+	Quantidade de recursos do processo após a alocação: 
+	2 3 15 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	3 7 3 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 1 
+	Quantidade de recursos disponivel no sistema: 
+	21 13 14 
+	Quantidade de recursos do sistema após a alocação: 
+	20 13 13 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 2 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	2 3 15 
+	Quantidade de recursos para liberar: 
+	0 2 7 
+	Quantidade de recursos no sistema após liberar: 
+	20 15 20 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 4 2 
+	Quantidade de recursos para liberar: 
+	2 1 0 
+	Quantidade de recursos no sistema após liberar: 
+	22 16 20 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 2 6 
+	Quantidade de recursos disponivel no sistema: 
+	22 16 20 
+	Quantidade de recursos do sistema após a alocação: 
+	22 14 14 
+	Quantidade de recursos do processo após a alocação: 
+	2 3 14 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	3 7 4 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 2 0 
+	Quantidade de recursos disponivel no sistema: 
+	22 14 14 
+	Quantidade de recursos do sistema após a alocação: 
+	22 12 14 
+	Quantidade de recursos do processo após a alocação: 
+	1 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 1 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	2 3 14 
+	Quantidade de recursos para liberar: 
+	1 0 1 
+	Quantidade de recursos no sistema após liberar: 
+	23 12 15 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	1 5 2 
+	Quantidade de recursos para liberar: 
+	0 3 0 
+	Quantidade de recursos no sistema após liberar: 
+	23 15 15 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 3 0 
+	Quantidade de recursos disponivel no sistema: 
+	23 15 15 
+	Quantidade de recursos do sistema após a alocação: 
+	22 12 15 
+	Quantidade de recursos do processo após a alocação: 
+	2 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 1 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 0 
+	Quantidade de recursos disponivel no sistema: 
+	22 12 15 
+	Quantidade de recursos do sistema após a alocação: 
+	21 10 15 
+	Quantidade de recursos do processo após a alocação: 
+	2 5 13 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	3 5 5 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	2 5 2 
+	Quantidade de recursos para liberar: 
+	0 3 1 
+	Quantidade de recursos no sistema após liberar: 
+	21 13 16 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 3 1 
+	Quantidade de recursos disponivel no sistema: 
+	21 13 16 
+	Quantidade de recursos do sistema após a alocação: 
+	20 10 15 
+	Quantidade de recursos do processo após a alocação: 
+	3 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	2 5 13 
+	Quantidade de recursos para liberar: 
+	0 1 10 
+	Quantidade de recursos no sistema após liberar: 
+	20 11 25 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 5 2 
+	Quantidade de recursos para liberar: 
+	2 4 0 
+	Quantidade de recursos no sistema após liberar: 
+	22 15 25 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	22 15 25 
+	Quantidade de recursos do sistema após a alocação: 
+	21 15 25 
+	Quantidade de recursos do processo após a alocação: 
+	2 1 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 5 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 3 14 
+	Quantidade de recursos disponivel no sistema: 
+	21 15 25 
+	Quantidade de recursos do sistema após a alocação: 
+	21 12 11 
+	Quantidade de recursos do processo após a alocação: 
+	2 7 17 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	3 3 1 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	2 1 2 
+	Quantidade de recursos para liberar: 
+	1 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	22 12 11 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	2 7 17 
+	Quantidade de recursos para liberar: 
+	0 2 4 
+	Quantidade de recursos no sistema após liberar: 
+	22 14 15 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 0 
+	Quantidade de recursos disponivel no sistema: 
+	22 14 15 
+	Quantidade de recursos do sistema após a alocação: 
+	22 13 15 
+	Quantidade de recursos do processo após a alocação: 
+	1 2 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 4 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	2 0 1 
+	Quantidade de recursos disponivel no sistema: 
+	22 13 15 
+	Quantidade de recursos do sistema após a alocação: 
+	20 13 14 
+	Quantidade de recursos do processo após a alocação: 
+	4 5 14 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 5 4 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	1 2 2 
+	Quantidade de recursos para liberar: 
+	0 0 1 
+	Quantidade de recursos no sistema após liberar: 
+	20 13 15 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 13 15 
+	Quantidade de recursos do sistema após a alocação: 
+	19 13 14 
+	Quantidade de recursos do processo após a alocação: 
+	2 2 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 4 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	4 5 14 
+	Quantidade de recursos para liberar: 
+	0 0 13 
+	Quantidade de recursos no sistema após liberar: 
+	19 13 27 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 4 11 
+	Quantidade de recursos disponivel no sistema: 
+	19 13 27 
+	Quantidade de recursos do sistema após a alocação: 
+	18 9 16 
+	Quantidade de recursos do processo após a alocação: 
+	5 9 12 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 6 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	2 2 2 
+	Quantidade de recursos para liberar: 
+	0 1 0 
+	Quantidade de recursos no sistema após liberar: 
+	18 10 16 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	5 9 12 
+	Quantidade de recursos para liberar: 
+	2 7 8 
+	Quantidade de recursos no sistema após liberar: 
+	20 17 24 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	20 17 24 
+	Quantidade de recursos do sistema após a alocação: 
+	19 17 24 
+	Quantidade de recursos do processo após a alocação: 
+	3 1 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 5 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 1 2 
+	Quantidade de recursos para liberar: 
+	2 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	21 17 24 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 2 1 
+	Quantidade de recursos disponivel no sistema: 
+	21 17 24 
+	Quantidade de recursos do sistema após a alocação: 
+	21 15 23 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 5 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 6 13 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 4 5 
+	Quantidade de recursos para liberar: 
+	1 2 3 
+	Quantidade de recursos no sistema após liberar: 
+	22 17 26 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	22 17 26 
+	Quantidade de recursos do sistema após a alocação: 
+	22 17 26 
+	Quantidade de recursos do processo após a alocação: 
+	1 1 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 5 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	2 1 4 
+	Quantidade de recursos disponivel no sistema: 
+	22 17 26 
+	Quantidade de recursos do sistema após a alocação: 
+	20 16 22 
+	Quantidade de recursos do processo após a alocação: 
+	4 3 6 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 7 12 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	1 1 2 
+	Quantidade de recursos para liberar: 
+	0 0 1 
+	Quantidade de recursos no sistema após liberar: 
+	20 16 23 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 3 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 16 23 
+	Quantidade de recursos do sistema após a alocação: 
+	20 13 22 
+	Quantidade de recursos do processo após a alocação: 
+	1 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 2 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	4 3 6 
+	Quantidade de recursos para liberar: 
+	1 2 1 
+	Quantidade de recursos no sistema após liberar: 
+	21 15 23 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 2 3 
+	Quantidade de recursos disponivel no sistema: 
+	21 15 23 
+	Quantidade de recursos do sistema após a alocação: 
+	21 13 20 
+	Quantidade de recursos do processo após a alocação: 
+	3 3 8 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 7 10 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 3 8 
+	Quantidade de recursos para liberar: 
+	1 2 6 
+	Quantidade de recursos no sistema após liberar: 
+	22 15 26 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	1 4 2 
+	Quantidade de recursos para liberar: 
+	0 2 0 
+	Quantidade de recursos no sistema após liberar: 
+	22 17 26 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 0 
+	Quantidade de recursos disponivel no sistema: 
+	22 17 26 
+	Quantidade de recursos do sistema após a alocação: 
+	21 15 26 
+	Quantidade de recursos do processo após a alocação: 
+	2 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 2 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 8 0 
+	Quantidade de recursos disponivel no sistema: 
+	21 15 26 
+	Quantidade de recursos do sistema após a alocação: 
+	21 7 26 
+	Quantidade de recursos do processo após a alocação: 
+	2 9 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	3 1 16 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	2 9 2 
+	Quantidade de recursos para liberar: 
+	0 5 0 
+	Quantidade de recursos no sistema após liberar: 
+	21 12 26 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	2 4 2 
+	Quantidade de recursos para liberar: 
+	1 1 0 
+	Quantidade de recursos no sistema após liberar: 
+	22 13 26 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 0 
+	Quantidade de recursos disponivel no sistema: 
+	22 13 26 
+	Quantidade de recursos do sistema após a alocação: 
+	21 11 26 
+	Quantidade de recursos do processo após a alocação: 
+	2 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 1 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	2 5 2 
+	Quantidade de recursos para liberar: 
+	0 2 1 
+	Quantidade de recursos no sistema após liberar: 
+	21 13 27 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 3 
+	Quantidade de recursos disponivel no sistema: 
+	21 13 27 
+	Quantidade de recursos do sistema após a alocação: 
+	20 13 24 
+	Quantidade de recursos do processo após a alocação: 
+	3 4 5 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 6 13 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 13 24 
+	Quantidade de recursos do sistema após a alocação: 
+	19 11 23 
+	Quantidade de recursos do processo após a alocação: 
+	3 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 4 5 
+	Quantidade de recursos para liberar: 
+	0 3 4 
+	Quantidade de recursos no sistema após liberar: 
+	19 14 27 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 5 2 
+	Quantidade de recursos para liberar: 
+	0 2 1 
+	Quantidade de recursos no sistema após liberar: 
+	19 16 28 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 2 1 
+	Quantidade de recursos disponivel no sistema: 
+	19 16 28 
+	Quantidade de recursos do sistema após a alocação: 
+	19 14 27 
+	Quantidade de recursos do processo após a alocação: 
+	3 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 5 2 
+	Quantidade de recursos para liberar: 
+	1 4 1 
+	Quantidade de recursos no sistema após liberar: 
+	20 18 28 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	20 18 28 
+	Quantidade de recursos do sistema após a alocação: 
+	19 18 28 
+	Quantidade de recursos do processo após a alocação: 
+	4 1 1 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 9 17 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	4 1 1 
+	Quantidade de recursos para liberar: 
+	1 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	20 18 28 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 18 28 
+	Quantidade de recursos do sistema após a alocação: 
+	19 16 27 
+	Quantidade de recursos do processo após a alocação: 
+	3 3 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 3 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 5 16 
+	Quantidade de recursos disponivel no sistema: 
+	19 16 27 
+	Quantidade de recursos do sistema após a alocação: 
+	18 11 11 
+	Quantidade de recursos do processo após a alocação: 
+	4 6 17 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 4 1 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 3 2 
+	Quantidade de recursos para liberar: 
+	1 0 1 
+	Quantidade de recursos no sistema após liberar: 
+	19 11 12 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	4 6 17 
+	Quantidade de recursos para liberar: 
+	3 1 10 
+	Quantidade de recursos no sistema após liberar: 
+	22 12 22 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	2 1 8 
+	Quantidade de recursos disponivel no sistema: 
+	22 12 22 
+	Quantidade de recursos do sistema após a alocação: 
+	20 11 14 
+	Quantidade de recursos do processo após a alocação: 
+	3 6 15 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 4 3 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	3 6 15 
+	Quantidade de recursos para liberar: 
+	0 0 12 
+	Quantidade de recursos no sistema após liberar: 
+	20 11 26 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 11 26 
+	Quantidade de recursos do sistema após a alocação: 
+	19 9 25 
+	Quantidade de recursos do processo após a alocação: 
+	3 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 9 
+	Quantidade de recursos disponivel no sistema: 
+	19 9 25 
+	Quantidade de recursos do sistema após a alocação: 
+	18 9 16 
+	Quantidade de recursos do processo após a alocação: 
+	4 6 12 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 4 6 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	4 6 12 
+	Quantidade de recursos para liberar: 
+	0 1 3 
+	Quantidade de recursos no sistema após liberar: 
+	18 10 19 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 5 2 
+	Quantidade de recursos para liberar: 
+	1 1 1 
+	Quantidade de recursos no sistema após liberar: 
+	19 11 20 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 0 
+	Quantidade de recursos disponivel no sistema: 
+	19 11 20 
+	Quantidade de recursos do sistema após a alocação: 
+	18 9 20 
+	Quantidade de recursos do processo após a alocação: 
+	5 7 9 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 3 9 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	5 7 9 
+	Quantidade de recursos para liberar: 
+	0 6 4 
+	Quantidade de recursos no sistema após liberar: 
+	18 15 24 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	18 15 24 
+	Quantidade de recursos do sistema após a alocação: 
+	17 14 23 
+	Quantidade de recursos do processo após a alocação: 
+	3 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 5 2 
+	Quantidade de recursos para liberar: 
+	0 4 0 
+	Quantidade de recursos no sistema após liberar: 
+	17 18 23 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 8 6 
+	Quantidade de recursos disponivel no sistema: 
+	17 18 23 
+	Quantidade de recursos do sistema após a alocação: 
+	17 10 17 
+	Quantidade de recursos do processo após a alocação: 
+	5 9 11 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 7 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	5 9 11 
+	Quantidade de recursos para liberar: 
+	3 8 3 
+	Quantidade de recursos no sistema após liberar: 
+	20 18 20 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 2 0 
+	Quantidade de recursos disponivel no sistema: 
+	20 18 20 
+	Quantidade de recursos do sistema após a alocação: 
+	20 16 20 
+	Quantidade de recursos do processo após a alocação: 
+	3 3 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 3 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	3 3 2 
+	Quantidade de recursos para liberar: 
+	2 0 1 
+	Quantidade de recursos no sistema após liberar: 
+	22 16 21 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	2 6 6 
+	Quantidade de recursos disponivel no sistema: 
+	22 16 21 
+	Quantidade de recursos do sistema após a alocação: 
+	20 10 15 
+	Quantidade de recursos do processo após a alocação: 
+	4 7 14 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 3 4 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	4 7 14 
+	Quantidade de recursos para liberar: 
+	3 1 8 
+	Quantidade de recursos no sistema após liberar: 
+	23 11 23 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	23 11 23 
+	Quantidade de recursos do sistema após a alocação: 
+	23 10 22 
+	Quantidade de recursos do processo após a alocação: 
+	1 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 2 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 9 
+	Quantidade de recursos disponivel no sistema: 
+	23 10 22 
+	Quantidade de recursos do sistema após a alocação: 
+	22 10 13 
+	Quantidade de recursos do processo após a alocação: 
+	2 6 15 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	3 4 3 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	1 4 2 
+	Quantidade de recursos para liberar: 
+	0 3 1 
+	Quantidade de recursos no sistema após liberar: 
+	22 13 14 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	2 6 15 
+	Quantidade de recursos para liberar: 
+	1 3 7 
+	Quantidade de recursos no sistema após liberar: 
+	23 16 21 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 1 
+	Quantidade de recursos disponivel no sistema: 
+	23 16 21 
+	Quantidade de recursos do sistema após a alocação: 
+	22 16 20 
+	Quantidade de recursos do processo após a alocação: 
+	2 1 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 5 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	2 1 2 
+	Quantidade de recursos para liberar: 
+	1 0 1 
+	Quantidade de recursos no sistema após liberar: 
+	23 16 21 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 2 8 
+	Quantidade de recursos disponivel no sistema: 
+	23 16 21 
+	Quantidade de recursos do sistema após a alocação: 
+	22 14 13 
+	Quantidade de recursos do processo após a alocação: 
+	2 5 16 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	3 5 2 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	2 5 16 
+	Quantidade de recursos para liberar: 
+	0 3 8 
+	Quantidade de recursos no sistema após liberar: 
+	22 17 21 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	2 1 7 
+	Quantidade de recursos disponivel no sistema: 
+	22 17 21 
+	Quantidade de recursos do sistema após a alocação: 
+	20 16 14 
+	Quantidade de recursos do processo após a alocação: 
+	4 3 15 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 7 3 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 16 14 
+	Quantidade de recursos do sistema após a alocação: 
+	20 15 13 
+	Quantidade de recursos do processo após a alocação: 
+	1 2 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 4 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	1 2 2 
+	Quantidade de recursos para liberar: 
+	0 1 0 
+	Quantidade de recursos no sistema após liberar: 
+	20 16 13 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 4 0 
+	Quantidade de recursos disponivel no sistema: 
+	20 16 13 
+	Quantidade de recursos do sistema após a alocação: 
+	19 12 13 
+	Quantidade de recursos do processo após a alocação: 
+	2 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 1 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	4 3 15 
+	Quantidade de recursos para liberar: 
+	0 1 0 
+	Quantidade de recursos no sistema após liberar: 
+	19 13 13 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	19 13 13 
+	Quantidade de recursos do sistema após a alocação: 
+	18 13 13 
+	Quantidade de recursos do processo após a alocação: 
+	5 2 15 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 8 3 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	2 5 2 
+	Quantidade de recursos para liberar: 
+	1 2 1 
+	Quantidade de recursos no sistema após liberar: 
+	19 15 14 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	19 15 14 
+	Quantidade de recursos do sistema após a alocação: 
+	19 14 13 
+	Quantidade de recursos do processo após a alocação: 
+	1 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 2 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	1 4 2 
+	Quantidade de recursos para liberar: 
+	0 2 0 
+	Quantidade de recursos no sistema após liberar: 
+	19 16 13 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 0 
+	Quantidade de recursos disponivel no sistema: 
+	19 16 13 
+	Quantidade de recursos do sistema após a alocação: 
+	18 16 13 
+	Quantidade de recursos do processo após a alocação: 
+	2 2 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 4 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	5 2 15 
+	Quantidade de recursos para liberar: 
+	1 1 7 
+	Quantidade de recursos no sistema após liberar: 
+	19 17 20 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	2 2 2 
+	Quantidade de recursos para liberar: 
+	1 1 1 
+	Quantidade de recursos no sistema após liberar: 
+	20 18 21 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 18 21 
+	Quantidade de recursos do sistema após a alocação: 
+	19 17 20 
+	Quantidade de recursos do processo após a alocação: 
+	2 2 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 4 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 7 
+	Quantidade de recursos disponivel no sistema: 
+	19 17 20 
+	Quantidade de recursos do sistema após a alocação: 
+	18 17 13 
+	Quantidade de recursos do processo após a alocação: 
+	5 1 15 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 9 3 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	2 2 2 
+	Quantidade de recursos para liberar: 
+	1 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	19 17 13 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	5 1 15 
+	Quantidade de recursos para liberar: 
+	1 0 12 
+	Quantidade de recursos no sistema após liberar: 
+	20 17 25 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 2 0 
+	Quantidade de recursos disponivel no sistema: 
+	20 17 25 
+	Quantidade de recursos do sistema após a alocação: 
+	20 15 25 
+	Quantidade de recursos do processo após a alocação: 
+	1 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 2 0 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	1 4 2 
+	Quantidade de recursos para liberar: 
+	0 0 1 
+	Quantidade de recursos no sistema após liberar: 
+	20 15 26 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 5 7 
+	Quantidade de recursos disponivel no sistema: 
+	20 15 26 
+	Quantidade de recursos do sistema após a alocação: 
+	19 10 19 
+	Quantidade de recursos do processo após a alocação: 
+	5 6 10 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 4 8 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	5 6 10 
+	Quantidade de recursos para liberar: 
+	1 0 3 
+	Quantidade de recursos no sistema após liberar: 
+	20 10 22 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 0 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 10 22 
+	Quantidade de recursos do sistema após a alocação: 
+	20 10 21 
+	Quantidade de recursos do processo após a alocação: 
+	1 4 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 2 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 0 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 10 21 
+	Quantidade de recursos do sistema após a alocação: 
+	19 10 20 
+	Quantidade de recursos do processo após a alocação: 
+	5 6 8 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 4 10 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	1 4 2 
+	Quantidade de recursos para liberar: 
+	0 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	19 10 20 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 1 0 
+	Quantidade de recursos disponivel no sistema: 
+	19 10 20 
+	Quantidade de recursos do sistema após a alocação: 
+	19 9 20 
+	Quantidade de recursos do processo após a alocação: 
+	1 5 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	2 1 0 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	5 6 8 
+	Quantidade de recursos para liberar: 
+	0 2 6 
+	Quantidade de recursos no sistema após liberar: 
+	19 11 26 
+P2: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P2: 
+	1 5 2 
+	Quantidade de recursos para liberar: 
+	0 0 0 
+	Quantidade de recursos no sistema após liberar: 
+	19 11 26 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	0 5 12 
+	Quantidade de recursos disponivel no sistema: 
+	19 11 26 
+	Quantidade de recursos do sistema após a alocação: 
+	19 6 14 
+	Quantidade de recursos do processo após a alocação: 
+	5 9 14 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	0 1 4 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	5 9 14 
+	Quantidade de recursos para liberar: 
+	2 5 0 
+	Quantidade de recursos no sistema após liberar: 
+	21 11 14 
+P2: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 1 0 
+	Quantidade de recursos disponivel no sistema: 
+	21 11 14 
+	Quantidade de recursos do sistema após a alocação: 
+	20 10 14 
+	Quantidade de recursos do processo após a alocação: 
+	2 6 2 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 0 0 
+P3: Recurso alocado! 
+	Quantidade de recursos requeridos: 
+	1 1 1 
+	Quantidade de recursos disponivel no sistema: 
+	20 10 14 
+	Quantidade de recursos do sistema após a alocação: 
+	19 9 13 
+	Quantidade de recursos do processo após a alocação: 
+	4 5 15 
+	Quantidade de recursos necessarios para finalizar do processo: 
+	1 5 3 
+P3: Recursos Liberados com sucesso
+	Quantidade de recursos alocados P3: 
+	4 5 15 
+	Quantidade de recursos para liberar: 
+	1 1 3 
+	Quantidade de recursos no sistema após liberar: 
+	20 10 16 
+^C

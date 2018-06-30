@@ -107,7 +107,7 @@ void verifica_recursos(int p){
 
 	if(flag == dados->nro_recurso)
 	{	
-		printf("---------------------------------\n- P%d está pronto para terminar -\n---------------------------------\n", p);
+		printf("----------------------------------\n- P%d Conseguiu todos os recursos -\n----------------------------------\n", p);
 		sleep(random() % 10);
 		printf("---------------------\n- P%d Voltou a vida -\n---------------------\n", p);
 

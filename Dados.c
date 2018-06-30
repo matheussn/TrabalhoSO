@@ -56,6 +56,8 @@ int init_Dados(int total[], int nroProcesso, int nroRecurso, float aux){
 		dados->processo[pid].status = 0;
 	}
 
+	printf("Quantidade total de recursos de cada processo:\n");
+
 	for( pid = 0; pid < nroProcesso; pid++){
 		printf("P%d: ", pid);
 		for(j = 0; j < nroRecurso; j++)

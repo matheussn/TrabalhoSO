@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 			aux = atof(argv[4]);
 
 			if(aux <= 1.0 && aux >= 0.1){
-				atribuiArgumentos(argv, argc, 6);				
+				atribuiArgumentos(argv, argc, 6);
 			}
 			else{
 				printf("O valor após -p deve ser um ponto flutuante entre 0.1 e 1.0\n");
@@ -40,17 +40,14 @@ int main(int argc, char **argv)
 		}
 		else
 		{
-			atribuiArgumentos(argv, argc, 4);			
+			atribuiArgumentos(argv, argc, 4);
 		}
 
 		nro_processos = atoi(argv[2]);
 
 		printf("Numero de Clientes:\t %i \n", nro_processos);
 
-
 		printf("Numero de recursos:\t %i\n", nro_recursos);
-
-		printf("\n");
 
 		int verifica = init_Dados(avail, nro_processos, nro_recursos, aux);
 		if( verifica == 0){
@@ -62,7 +59,11 @@ int main(int argc, char **argv)
 
 		pthread_t *tid;
 		tid = (pthread_t *) malloc(sizeof(pthread_t) * nro_processos);
-		
+
+		printf("\n========================\n");
+		printf("= Iniciando Simulação! =\n");
+		printf("========================\n\n");
+
 		int i,j;
 		for(i = 0; i < nro_processos; i ++){
 			pthread_create(&tid[i], NULL,threads, &i);
@@ -73,7 +74,7 @@ int main(int argc, char **argv)
 		}
 	}
 	else
-		fprintf(stderr,"Agumento invalido\n");
+		fprintf(stderr,"Argumento invalido\n");
 }
 
 
