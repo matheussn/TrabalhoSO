@@ -32,7 +32,7 @@ int init_Dados(int total[], int nroProcesso, int nroRecurso, float aux){
 
 	dados->nro_processo = nroProcesso;
 
-	dados->porcentagem = aux; 
+	dados->porcentagem = aux;
 
 	for(i = 0; i < nroRecurso; i ++){
 		dados->total[i] = dados->disponivel[i] = total[i];
@@ -69,7 +69,7 @@ int init_Dados(int total[], int nroProcesso, int nroRecurso, float aux){
 				printf("%d ", dados->processo[pid].quantTotal[j]);
 			}
 			else
-				j--;		
+				j--;
 		}
 		printf("\n");
 	}
@@ -83,6 +83,6 @@ int randomico(int a){
 	int x;
 
 	srand( (unsigned) (a *random()) +(random()* time(NULL)));
-	x = (random() % a )  ;
-	return x ;
+	x = (random() % a );
+	return x;
 }

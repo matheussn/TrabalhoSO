@@ -13,7 +13,7 @@ struct dados {
 	int * total;
 	int nro_processo;
 	int nro_recurso;
-    float porcentagem;
+	float porcentagem;
 	Processo * processo;
 };
 typedef struct dados Dados;
