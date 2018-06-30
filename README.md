@@ -7,8 +7,8 @@ O objetivo desse trabalho é implementar de forma simples o algoritmo do banquei
 O programa permite a criação de cenários dinâmicos de quantidade de recursos, numero de recursos, numero de processos, quantidade de recurso que cada processo precisa e também permite limitar a quantidade de recurso de cada processo dado uma porcentagem em relação a quantidade de recursos.<br>
 O programa pode ser executado das seguintes maneiras:
 <br><br>
-$ ./banqueiro -n <num_processos> -a <vet_alocação> <br>
-$ ./banqueiro -n <num_processos> -p <porcentagem> -a <vet_alocação> <br>
+$ ./banqueiro -n <-num_processos-> -a <-vet_alocação-> <br>
+$ ./banqueiro -n <-num_processos-> -p <-porcentagem-> -a <-vet_alocação-> <br>
 
 Em que num_processos é o número de processos a serem simulados por meio de threads, vet_alocação é o vetor disponivel com o numero de recursos de cada tipo que são disponiveis para simulação dos processos e porcentagem é a porcentagem limite para que ao gerar os recursos que cada thread precisa para concluir, seja limitado a essa porcentagem dos recursos passados no vet_alocação. <br>
 Caso a porcentagem não seja enviada, consideramos uma porcentagem default de 100%. <br>
