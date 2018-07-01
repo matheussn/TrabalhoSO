@@ -82,7 +82,7 @@ int randomico(int a){
 	time_t t;
 	int x;
 
-	srand( (unsigned) (a *random()) +(random()* time(NULL)));
+	srand( (unsigned) (random()) +(random()* time(NULL)));
 	x = (random() % a );
 	return x;
 }
