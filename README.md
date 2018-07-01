@@ -7,7 +7,7 @@ O objetivo desse trabalho é implementar de forma simples o algoritmo do banquei
 
 O programa permite a criação de cenários dinâmicos de quantidade de recursos, numero de recursos, numero de processos, quantidade de recurso que cada processo precisa e também permite limitar a quantidade de recurso de cada processo dado uma porcentagem em relação a quantidade de recursos.<br>
 
-Para compilar o programa é usado o makeFile, segue o comando:
+Para compilar o programa é usado o makeFile, segue o comando:<br>
 make -f makefile.1
 
 O programa pode ser executado das seguintes maneiras:
