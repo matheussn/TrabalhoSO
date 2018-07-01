@@ -45,7 +45,7 @@ Segue uma breve explicação de cada arquivo do diretório "programa":<br>
 
 O arquivo banqueiro.1 é um arquivo make que é utilizado para compilar os arquivos .c, para gerar o arquivo executável do programa. Para executá-lo basta digitar o comando "make -f banqueiro.1", assim será gerado um arquivo chamado "banqueiro". Para executar o programa, re-leia as instruções no inicio deste arquivo.<br>
 
-O arquivo Banqueiro.c contém a implementação das funções requisicao_recursos( ) e liberaçao_recursos( ), que empregados pelo algoritmo do banqueiro, permite determinar se o resultado da requisição é segura ou insegura. Possui o arquivo .h para definição das funções que serão empregadas no arquivo .c<br>
+O arquivo Banqueiro.c contém a implementação das funções requisicao_recursos e liberaçao_recursos( ), que empregados pelo algoritmo do banqueiro, permite determinar se o resultado da requisição é segura ou insegura. Possui o arquivo .h para definição das funções que serão empregadas no arquivo .c<br>
 
 O arquivo Processos.c contém funções que serão usadas pelas threads simuladas, como a função que retorna o pid simbólico de cada thread (init_Thread()), a função que verifica se existe somente uma thread ativa (kill_thread()), seu nome é simbólico pois ela matará o processo inteiro caso exista somente uma thread ativa, temos as funções de tratam a randomização da liberação e a requisição de recursos (rand_lib() e rand_req()) e por ultimo temos a função que verifica se a thread tem todos os recursos que ela precisa alocados, caso ela tenha essa função faz a thread dormir por um tempo randomico de 0 à 10 segundos, quando acaba esse tempo ela volta para execução. Possui o arquivo .h para definição das funções que serão empregadas no arquivo .c<br>
 
@@ -56,3 +56,6 @@ O arquivo Dados.h define duas estruturas (struct) uma para armazenar o que cada 
 Esse trabalho foi realizado pelos alunos: <br>
 	<strong>Mateus Benedini de Oliveira Santiago Prates </strong> - 11621BSI200<br>
 	<strong>Matheus Santiago Neto  </strong>- 11621BSI252<br>
+
+Segue abaixo o link do projeto do trabalho no github: <br>
+https://github.com/matheussn/TrabalhoSO <br>

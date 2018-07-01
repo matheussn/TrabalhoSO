@@ -1,3 +1,11 @@
+/*
+	Integrantes: 
+	Mateus Benedini de Oliveira Santiago Prates.  Matrícula:11621BSI200
+	Matheus Santiago Neto.  Matrícula:11621BSI252
+
+*/
+
+
 struct processo {
 	int pid;
 	int status; /*-1=> Morto  0=> Vivo*/

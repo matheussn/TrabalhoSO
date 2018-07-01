@@ -1,3 +1,10 @@
+/*
+	Integrantes: 
+	Mateus Benedini de Oliveira Santiago Prates  Matricula:11621BSI200
+	Matheus Santiago Neto  Matricula:11621BSI252
+
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
