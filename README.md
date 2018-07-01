@@ -1,4 +1,4 @@
-#Trabalho de SO - 2018/1
+# Trabalho de SO - 2018/1
 
 O objetivo desse trabalho é implementar de forma simples o algoritmo do banqueiro em C, simulando multiplos processos realizando requisições e liberação de recursos.<br>
 
@@ -27,19 +27,19 @@ Perceba que mesmo colocando uma porcentagem alta, o sistema entra em harmonia em
 
 A estrutura de pastas atual do trabalho é: <br>
 /TrabalhoSO<br>
-├─┬ exemplos<br>
-│ ├── execucao1.txt<br>
-│ └── execucao2.txt<br>
-├─┬ programa<br>
-│ ├── Banqueiro.c<br>
-│ ├── Banqueiro.h<br>
-│ ├── Dados.c<br>
-│ ├── Dados.h<br>
-│ ├── Processos.c<br>
-│ ├── Processos.h<br>
-│ ├── banqueiro.1<br>
-│ └── sistema.c<br>
-└── README.md<br>
+ ├ ┬ exemplos<br>
+ │ ├── execucao1.txt<br>
+ │ └── execucao2.txt<br>
+ ├ ┬ programa<br>
+ │ ├── Banqueiro.c<br>
+ │ ├── Banqueiro.h<br>
+ │ ├── Dados.c<br>
+ │ ├── Dados.h<br>
+ │ ├── Processos.c<br>
+ │ ├── Processos.h<br>
+ │ ├── banqueiro.1<br>
+ │ └── sistema.c<br>
+ └── README.md<br>
 
 Segue uma breve explicação de cada arquivo do diretório "programa":<br>
 
