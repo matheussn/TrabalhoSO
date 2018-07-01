@@ -1,0 +1,4 @@
+CC=gcc
+
+banqueiro: Banqueiro.c Processos.c Dados.c
+	$(CC) -pthread -o banqueiro sistema.c Banqueiro.c Processos.c Dados.c
